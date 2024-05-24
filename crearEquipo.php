@@ -10,7 +10,7 @@ include("components/include/nav.php")
 
                 <tr>
                     <td>
-                    <select name="usu_company" id="usu_company">
+                    <select class="añadirComentario" name="usu_company" id="usu_company">
                         <option value="" disabled selected>Compañeros</option>
 
                     </select>
@@ -18,7 +18,7 @@ include("components/include/nav.php")
                 </tr>
 
                 <tr>
-                    <td><input type="text" name="equipo_nombre" size="20" placeholder="Nombre de equipo"></td>
+                    <td><input class="añadirComentarioTexto" type="text" name="equipo_nombre" size="20" placeholder="Nombre de equipo"></td>
                 </tr>
 
                 <tr>

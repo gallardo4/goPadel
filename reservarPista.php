@@ -19,14 +19,14 @@ if (!isset($_SESSION["usu_id"])) {
         <form action="recepcionReservaPista.php" method="POST" class="formularioVerde">
             <table>
                 <tr>
-                    <td><input type="number" name="pista_id" max="10" min="1" placeholder="Pista" required></td>
+                    <td><input class="añadirComentarioTexto" type="number" name="pista_id" max="10" min="1" placeholder="Pista" required></td>
                 </tr>
                 <tr>
-                    <td><input type="date" name="res_fecha" size="20" placeholder="Fecha" required></td>
+                    <td><input class="añadirComentario" type="date" name="res_fecha" size="20" placeholder="Fecha" required></td>
                 </tr>
                 <tr><td>
 
-                <input type="hidden" value="40" name="precio_pista">
+                <input type="hidden" value="40" name="precio_pista"><br>
                 <label for="precio_pista">2h - 40€</label>
                 </td></tr>
                 <tr><td>

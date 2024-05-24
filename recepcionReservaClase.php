@@ -22,7 +22,10 @@ if($_SERVER['REQUEST_METHOD'] == 'GET' && isset($_GET['hora']) && isset($_GET['p
 
     if($arrayResult[0] >= 1){
 
-        echo "NO FUNCIONA";
+        echo '<div style="border: 2px solid red; padding: 20px; font-size: 20px; color: red; text-align: center; margin: 40px 0;">
+        <h2>NO SE HA PODIDO ACCEDER A LA CLASE</h2>
+        <p>ERROR: ' . mysqli_error($conn) . '</p>
+      </div>';
 
     }else{
 
@@ -30,8 +33,13 @@ if($_SERVER['REQUEST_METHOD'] == 'GET' && isset($_GET['hora']) && isset($_GET['p
 
         mysqli_query($conn, $sql);
 
-        echo "<h2>Reserva realizada con éxito.</h2>";
-
+        echo '<div class="reserva">
+        <h2>ACCESO A LA CLASE</h2>
+        <p>Pista: ' . $pista_id . '</p>
+        <p>Fecha Reserva: ' . $fecha_dia . '</p>
+        <p>Precio: ' . $precio_clase . '€</p>
+        <p>Hora: ' . $hora . 'h</p>
+      </div>';
     }
 
 

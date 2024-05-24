@@ -20,7 +20,9 @@ include("components/include/database.php");
     $check_result = mysqli_query($conn, $check_sql);
 
     if (mysqli_num_rows($check_result) > 0) {
-        echo "Error: La pista ya está reservada para esa fecha y hora.";
+        echo '<div style="border: 2px solid red; padding: 20px; font-size: 20px; color: red; text-align: center; margin: 40px 0;">
+            <h2>PISTA YA RESERVADA PARA ESA PISTA Y FECHA</h2>
+            </div>';
     } else {
         // INSERTAR RESERVA EN TABLA RESERVA_PISTA
         $sql = "INSERT INTO RESERVA_PISTA (pista_id, usu_id, precio_pista, fecha_dia, hora) VALUES ('$pista_id', '$usu_id', '$precio_pista', '$res_fecha', '$hora')";
@@ -28,11 +30,15 @@ include("components/include/database.php");
 
         //echo $sql . "<br>";  // SQL CODIGO
         if ($result) {
-            echo "<h2>Reserva realizada con éxito.</h2>";
-        } else {
-            echo "Error: " . mysqli_error($conn);  // MENSAJE ERROR
+            echo '<div class="reserva">
+                    <h2>RESERVA REALIZADA CON ÉXITO</h2>
+                    <p> Pista: '. $pista_id .' </p>
+                    <p> Fecha Reserva: '. $res_fecha .' </p>
+                    <p> Precio: '. $precio_pista .'€ </p>
+                    <p> Hora: '. $hora .'h </p>
+                  </div>';
         }
-    }
+    } 
 
 
 mysqli_close($conn);
