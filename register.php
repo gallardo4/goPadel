@@ -8,23 +8,23 @@ include("components/include/nav.php")
         <form action="./components/api/afegirUser.proc.php" method="POST" enctype="multipart/form-data" onsubmit="return validarContrasena();" class="formularioVerde1">
             <table>
                 <tr>
-                    <td><input type="text" name="usu_nom" size="20" placeholder="Nombre"></td>
+                    <td><input class="añadirComentarioTexto" type="text" name="usu_nom" size="20" placeholder="Nombre"></td>
                 </tr>
                 <tr>
-                    <td><input type="text" name="usu_apellido" size="20" placeholder="Apellido"></td>
+                    <td><input class="añadirComentarioTexto" type="text" name="usu_apellido" size="20" placeholder="Apellido"></td>
                 </tr>
                 <tr>
-                    <td><input type="email" name="usu_mail" size="20" placeholder="Email"></td>
+                    <td><input class="añadirComentarioTexto" type="email" name="usu_mail" size="20" placeholder="Email"></td>
                 </tr>
                 <tr>
-                    <td><input type="tel" name="usu_telf" size="20" placeholder="Teléfono"></td>
+                    <td><input class="añadirComentarioTexto" type="tel" name="usu_telf" size="20" placeholder="Teléfono"></td>
                 </tr>
                 <tr>
-                    <td><input type="password" name="usu_contra" size="20" placeholder="Contraseña"></td>
+                    <td><input class="añadirComentarioTexto" type="password" name="usu_contra" size="20" placeholder="Contraseña"></td>
                 </tr>
                 <tr>
                     <td>
-                        <select name="usu_genero">
+                        <select class="añadirComentario" name="usu_genero">
                             <option value="" disabled selected>Género</option>
                             <option value="M">Hombre</option>
                             <option value="F">Mujer</option>
@@ -34,7 +34,7 @@ include("components/include/nav.php")
                 </tr>
                 <tr>
                     <td>
-                        <select name="usu_nivel">
+                        <select class="añadirComentario" name="usu_nivel">
                             <option value="" disabled selected>Nivel de Padel</option>
                             <option value="c">c</option>
                             <option value="c+">c+</option>
@@ -47,7 +47,7 @@ include("components/include/nav.php")
                 </tr>
                 <tr>
                     <td>
-                        <input type="file" name="usu_img" id="usu_img">
+                        <input class="añadirComentario" type="file" name="usu_img" id="usu_img">
                     </td>
                 </tr>
                 <tr>
