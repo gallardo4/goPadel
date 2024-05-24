@@ -4,6 +4,7 @@ include("components/include/nav.php")
 
     <section class="formularios">
         <h2>Iniciar Sesión</h2>
+        <h2>Rama Auxiliar</h2>
 
         <form action="./components/api/loginUser.proc.php" method="GET" class="formularioVerde">
             <table>
