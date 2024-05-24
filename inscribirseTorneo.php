@@ -18,20 +18,20 @@ if (!isset($_SESSION["usu_id"])) {
         <form action="pagarClase.php" method="POST" class="formularioVerde">
             <table>
                 <tr>
-                    <td><input type="nombre" name="usu_nom" size="20" placeholder="Nombre"></td>
+                    <td><input class="añadirComentarioTexto" type="nombre" name="usu_nom" size="20" placeholder="Nombre"></td>
                 </tr>
                 <tr>
-                    <td><input type="nombre" name="pareja" size="20" placeholder="Nombre Pareja"></td>
+                    <td><input class="añadirComentarioTexto" type="nombre" name="pareja" size="20" placeholder="Nombre Pareja"></td>
                 </tr>
                 <tr>
-                    <td><input type="email" name="usu_mail" size="20" placeholder="Email"></td>
+                    <td><input class="añadirComentarioTexto" type="email" name="usu_mail" size="20" placeholder="Email"></td>
                 </tr>
                 <tr>
-                    <td><input type="date" name="clas_fecha" size="20" placeholder="Fecha"></td>
+                    <td><input class="añadirComentario" type="date" name="clas_fecha" size="20" placeholder="Fecha"></td>
                 </tr>
                 <tr>
                     <td>
-                        <select name="clas_nivel">
+                        <select class="añadirComentario" name="clas_nivel">
                             <option value="" disabled selected>Nivel de dificultad</option>
                             <option value="professional">professional</option>
                             <option value="a">a</option>

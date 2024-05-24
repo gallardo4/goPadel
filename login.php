@@ -8,10 +8,10 @@ include("components/include/nav.php")
         <form action="./components/api/loginUser.proc.php" method="GET" class="formularioVerde">
             <table>
                 <tr>
-                    <td><input type="email" name="usu_mail" size="20" placeholder="Email"></td>
+                    <td><input class="añadirComentarioTexto" type="email" name="usu_mail" size="20" placeholder="Email"></td>
                 </tr>
                 <tr>
-                    <td><input type="password" name="usu_contra" size="20" placeholder="Contraseña"><br><br></td>
+                    <td><input class="añadirComentarioTexto" type="password" name="usu_contra" size="20" placeholder="Contraseña"><br><br></td>
                 </tr>
                 <tr>
                     <td><input class="añadirComentario" type="submit" value="Iniciar Sesión"></td>
