@@ -66,6 +66,7 @@ h1{
     height: 2.5rem;
     width: 2.5rem;
     border-radius:100%;
+    z-index: 1;
 }
 
 .profileUser{
@@ -81,12 +82,13 @@ h1{
     align-items: center;
     text-decoration: none;
     padding: 5px 10px;
-    border: 1px solid blue;
     font-size: 18px;
     color: blue;
     background-color: lightblue;
-    margin-left: 10%;
-    border-radius: 5px;
+    border-radius: 95px;
+    margin-left: -42px;
+    padding-left:50px;
+    padding-right:15px ;
     transition: background-color 0.3s, color 0.3s;
 }
 

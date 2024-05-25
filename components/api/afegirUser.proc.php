@@ -25,7 +25,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     //COMPRUEVO LA EXISTENCIA DE USUARIOS CON EL MISMO MAIL, EL DATO POR EL CUAL SE INICIA SESIÓN.
 
-    $sqlExists = "SELECT EXISTS (SELECT 1 FROM USUARI WHERE usu_mail='$usu_mail')";
+    $sqlExists = "SELECT EXISTS (SELECT 1 FROM USUARI WHERE usu_mail='$usu_mail' OR usu_telf='$usu_telf)";
 
     $resultExists = mysqli_query($conn, $sqlExists);
 
