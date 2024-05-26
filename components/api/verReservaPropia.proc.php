@@ -5,18 +5,16 @@ include("../include/database.php");
 session_start();
 
 
-if($_SERVER['REQUEST_METHOD'] == "GET" && isset($_GET['type']) && isset($_SESSION['usu_type']) && $_SESSION['usu_type']=='admin' ) {
+if($_SERVER['REQUEST_METHOD'] == "GET" && isset($_GET['type']) && isset($_SESSION['usu_id'])) {
+
+    $usu_id = $_SESSION['usu_id'];
 
     if($_GET['type'] == 'clase'){
 
 
         //$sql="SELECT * FROM RESERVA_CLASE WHERE usu_id=$usu_id";
-        $sql = "SELECT RC.*, U_prof.usu_nom AS nombre_profesor, U_prof.usu_apellido AS apellido_profesor, U_alum.usu_nom AS nombre_alumno, U_alum.usu_apellido AS apellido_alumno 
-        FROM RESERVA_CLASE RC
-        JOIN CLASE C ON RC.clase_id = C.UniqueID
-        JOIN USUARI U_prof ON C.profe_ID = U_prof.usu_id
-        JOIN USUARI U_alum ON RC.usu_id = U_alum.usu_id";
-    
+        $sql="SELECT rc.*, u.usu_nom AS nombre_profesor, u.usu_apellido AS apellido_profesor FROM RESERVA_CLASE rc JOIN CLASE c ON c.clase_id=rc.clase_id JOIN USUARI u ON u.usu_id=c.profe_id WHERE rc.usu_id=$usu_id";
+
         $result = mysqli_query($conn,$sql);
     
         $claseData = array();
@@ -37,9 +35,7 @@ if($_SERVER['REQUEST_METHOD'] == "GET" && isset($_GET['type']) && isset($_SESSIO
         
     }elseif($_GET['type'] == 'pista'){
 
-        $sql="SELECT RP.*, U.usu_nom AS nombre_usuario, U.usu_apellido AS apellido_usuario
-        FROM RESERVA_PISTA RP
-        JOIN USUARI U ON RP.usu_id = U.usu_id;";
+        $sql="SELECT * FROM RESERVA_PISTA WHERE usu_id=$usu_id";
 
         $result = mysqli_query($conn,$sql);
     

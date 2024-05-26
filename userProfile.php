@@ -194,7 +194,7 @@ include("components/include/nav.php");
                 
         })
 
-        fetch(`./components/api/verReservas.proc.php?type=clase`)
+        fetch(`./components/api/verReservaPropia.proc.php?type=clase`)
             .then(response=>response.json())
             .then(claseReservas => {
                 console.log(claseReservas)
@@ -224,7 +224,7 @@ include("components/include/nav.php");
                 
         })
 
-        fetch(`./components/api/verReservas.proc.php?type=pista`)
+        fetch(`./components/api/verReservaPropia.proc.php?type=pista`)
             .then(response=>response.json())
             
             .then(pistaReservas => {

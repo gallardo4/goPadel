@@ -14,6 +14,8 @@ if (!isset($_SESSION["usu_id"])) {
 ?>
     <h2>Lista Usuarios</h2>
     <br>
+    <a class='añadirComentario' href='crearUser.php'>Modificar</a>
+    <br>
     <table class='tablaProfYRank' border=1>
         <thead>
             <tr>

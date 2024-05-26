@@ -334,25 +334,32 @@ span{
     margin: 20px 0;
     font-size: 18px;
     text-align: left;
+    border: 0px;
+
 }
 
 .tablaProfYRank th, .tablaProfYRank td {
     padding: 12px 15px;
-    border: 1px solid #ddd;
+    border: 0px;
 }
 
 .tablaProfYRank th {
-    background-color: #f4f4f4;
+    background-color: #c0c0c0;
     color: #333;
     font-weight: bold;
 }
 
+
+.tablaProfYRank tr {
+    background-color: #fffde1;
+}
+
 .tablaProfYRank tr:nth-child(even) {
-    background-color: #f9f9f9;
+    background-color: #ffe1e1;
 }
 
 .tablaProfYRank tr:hover {
-    background-color: #f1f1f1;
+    background-color: #cecece;
 }
 
 .tablaProfYRank img {
