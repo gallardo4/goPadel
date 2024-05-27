@@ -10,7 +10,7 @@ include("components/include/nav.php");
 
 <br>
 
-<a class="añadirComentario" href="configurarUsuario.php">Configurar Usuario</a>
+<a class="anyadirComentario" href="configurarUsuario.php">Configurar Usuario</a>
     
 <br><br><br>
 <div id="infoClases">

@@ -53,7 +53,7 @@ if (!isset($_SESSION['usu_id'])) {
             <label for="email">Email de contacto:</label>
             <input type="email" id="email" name="usu_mail" readonly><br><br>
 
-            <button class="añadirComentario" type="submit">Actualizar</button>
+            <button class="anyadirComentario" type="submit">Actualizar</button>
         </form>
     </div>
 </section>

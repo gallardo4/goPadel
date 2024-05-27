@@ -14,7 +14,7 @@ if (!isset($_SESSION["usu_id"])) {
 ?>
     <h2>Lista Usuarios</h2>
     <br>
-    <a class='añadirComentario' href='crearUser.php'>Modificar</a>
+    <a class='anyadirComentario' href='crearUser.php'>Modificar</a>
     <br>
     <table class='tablaProfYRank' border=1>
         <thead>
@@ -61,9 +61,9 @@ if (!isset($_SESSION["usu_id"])) {
                     if (isset($_SESSION['usu_type']) && $_SESSION['usu_type']=='admin' ) {
                         ?>
                         
-                        <td><a class=añadirComentario href=ponerComentario.php?usu_id=${usuario.usu_id}>Añadir Comentario</a></td>
-                        <td><a class=añadirComentario href=./components/api/eliminarUser.proc.php?usu_id=${usuario.usu_id}>Eliminar</a></td>
-                        <td><a class=añadirComentario href=./modificarUser.php?usu_id=${usuario.usu_id}>Modificar</a></td>
+                        <td><a class=anyadirComentario href=ponerComentario.php?usu_id=${usuario.usu_id}>anyadir Comentario</a></td>
+                        <td><a class=anyadirComentario href=./components/api/eliminarUser.proc.php?usu_id=${usuario.usu_id}>Eliminar</a></td>
+                        <td><a class=anyadirComentario href=./modificarUser.php?usu_id=${usuario.usu_id}>Modificar</a></td>
 
                         <?php
                     
@@ -71,7 +71,7 @@ if (!isset($_SESSION["usu_id"])) {
                     }elseif (isset($_SESSION['usu_type']) && $_SESSION['usu_type']!='user') {
                         ?>
                         
-                        <td><a class=añadirComentario href=ponerComentario.php?usu_id=${usuario.usu_id}>Añadir Comentario</a></td>
+                        <td><a class=anyadirComentario href=ponerComentario.php?usu_id=${usuario.usu_id}>anyadir Comentario</a></td>
                     
                         <?php
                     }

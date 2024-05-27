@@ -43,7 +43,7 @@ include("components/include/nav.php")
                 btnTorneo.addEventListener("click",()=>window.location.href="gestionTorneo.php");
                 btnPartido.addEventListener("click",()=>window.location.href="gestionPartidos.php");
                 btnReservas.addEventListener("click",()=>window.location.href="gestionReservas.php");
-                btnProfesores.addEventListener("click",()=>window.location.href="gestionProfesores.php");
+                btnProfesores.addEventListener("click",()=>window.location.href="profesores.php");
                 btnClases.addEventListener("click",()=>window.location.href="gestionClases.php");
             </script>
         

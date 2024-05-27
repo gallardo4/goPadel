@@ -80,8 +80,8 @@ if (!isset($_SESSION["usu_id"])) {
                 
                         if (isset($_SESSION['usu_id'])) {
                             ?>
-                                <td><input class="añadirComentario" form="${form}" type="date" name="res_fecha" size="20" placeholder="Fecha" required></td>                    
-                                <td><input class="añadirComentario" form="${form}" type="submit" value="Apuntarse a esta clase"></td>  
+                                <td><input class="anyadirComentario" form="${form}" type="date" name="res_fecha" size="20" placeholder="Fecha" required></td>                    
+                                <td><input class="anyadirComentario" form="${form}" type="submit" value="Apuntarse a esta clase"></td>  
                             <?php
                         }
 

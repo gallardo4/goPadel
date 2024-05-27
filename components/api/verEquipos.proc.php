@@ -26,3 +26,4 @@ if($_SERVER['REQUEST_METHOD'] == "GET" && isset($_GET['usu_id_1'])) {
 
     echo json_encode($userData);
 }
+

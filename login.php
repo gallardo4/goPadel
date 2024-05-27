@@ -15,7 +15,7 @@ include("components/include/nav.php")
                     <td><input type="password" name="usu_contra" size="20" placeholder="Contraseña" value="1234"><br><br></td>
                 </tr>
                 <tr>
-                    <td><input class="añadirComentario" type="submit" value="Iniciar Sesión"></td>
+                    <td><input class="anyadirComentario" type="submit" value="Iniciar Sesión"></td>
                 </tr>
                 <tr>
                     <td><p>¿No estás registrado? ¡Regístrate ya <a class="iniciaSesion" href="register.php">aquí</a>!</p></td>

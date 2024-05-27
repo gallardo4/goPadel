@@ -97,7 +97,7 @@ h1{
     color: white;
 }
 
-.añadirComentario {
+.anyadirComentario {
     color: blue;
     text-decoration: none;
     padding: 5px 10px;
@@ -107,13 +107,13 @@ h1{
     transition: background-color 0.3s, color 0.3s;
 }
 
-.añadirComentario:hover {
+.anyadirComentario:hover {
     background-color: blue;
     color: white;
     cursor: pointer;
 }
 
-.añadirComentarioTexto {
+.anyadirComentarioTexto {
     color: blue;
     text-decoration: none;
     padding: 5px 10px;
@@ -123,7 +123,7 @@ h1{
     transition: background-color 0.3s, color 0.3s;
 }
 
-.añadirComentarioTexto:hover {
+.anyadirComentarioTexto:hover {
     background-color: blue;
     color: white;
     cursor: text;

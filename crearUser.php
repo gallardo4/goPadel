@@ -59,7 +59,7 @@ include("components/include/nav.php")
                     </td>
                 </tr>
                 <tr>
-                    <td><br><input class="añadirComentario" type="submit" value="Registrarse"></td>
+                    <td><br><input class="anyadirComentario" type="submit" value="Registrarse"></td>
                 </tr>
             </table>
         </form>

@@ -49,7 +49,7 @@ if (!isset($_SESSION["usu_id"])) {
                     <td>Num. ${clase.pista_id}</td>
                     <td>${clase.fecha_dia}</td>
                     <td>${clase.hora}</td>
-                    <td><a class="añadirComentario" href="./components/api/borrarReservaClase.proc.php?clase_id=${clase.clase_id}&usu_id=${clase.usu_id}&hora=${clase.hora}">Borrar Reserva</td>
+                    <td><a class="anyadirComentario" href="./components/api/borrarReservaClase.proc.php?clase_id=${clase.clase_id}&usu_id=${clase.usu_id}&hora=${clase.hora}">Borrar Reserva</td>
                     
                 `;
                 tablaReserva.appendChild(row);

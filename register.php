@@ -41,7 +41,7 @@ include("components/include/nav.php")
                             <option value="b">b</option>
                             <option value="b+">b+</option>
                             <option value="a">a</option>
-                            <option value="Profesional">Profesional</option>
+                            <option value="P">Profesional</option>
                         </select><br>
                     </td>
                 </tr>
@@ -49,7 +49,7 @@ include("components/include/nav.php")
                     <td><input type="file" name="perfilImg" id="perfilImg"><br></td>
                 </tr>
                 <tr>
-                    <td><br><input class="añadirComentario" type="submit" value="Registrarse"></td>
+                    <td><br><input class="anyadirComentario" type="submit" value="Registrarse"></td>
                 </tr>
             </table>
         </form>
