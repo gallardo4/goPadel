@@ -14,6 +14,12 @@ if (!isset($_SESSION["usu_id"])) {
 ?>
     <h2>Lista Usuarios</h2>
     <br>
+    <?php
+        if(isset($_REQUEST['msg'])){
+            echo "<h3>".$_REQUEST['msg']."</h3>";
+        }
+    ?>
+    <br>
     <a class='anyadirComentario' href='crearUser.php'>Crear nuevo usuario</a>
     <br>
     <table class='tablaProfYRank' border=1>
