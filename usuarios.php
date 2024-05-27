@@ -85,20 +85,6 @@ if (!isset($_SESSION["usu_id"])) {
             console.error('Error:', error);
         });
 
-        <?php
-
-        if (isset($_REQUEST['msg'])) {
-
-            ?>
-
-            alert("<?php echo $_REQUEST['msg']; ?>");
-
-            <?php
-
-        }
-
-        ?>
-
     </script>
 
 <?php
