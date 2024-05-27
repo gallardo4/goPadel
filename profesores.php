@@ -42,7 +42,7 @@ include("components/include/nav.php");
             data.forEach(profesor => {
                 const row = document.createElement('tr');
                 row.innerHTML = `
-                    <td><img style="width:60px; height:60px" src='components/pfpImg/${usuario.usu_img}'></td>
+                    <td><img style="width:60px; height:60px" src='components/pfpImg/${profesor.usu_img}'></td>
                     <td>${profesor.usu_apellido}</td>
                     <td>${profesor.usu_nom}</td>
 
