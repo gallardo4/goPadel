@@ -45,7 +45,7 @@ include("components/include/nav.php")
                         </select><br>
                     </td>
                 </tr>
-                <t>
+                <tr>
                     <td><input class="anyadirComentario" type="file" name="perfilImg" id="perfilImg"><br></td>
                 </tr>
                 <tr>
