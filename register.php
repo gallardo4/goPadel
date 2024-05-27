@@ -8,23 +8,23 @@ include("components/include/nav.php")
         <form action="./components/api/afegirUser.proc.php" method="POST" enctype="multipart/form-data" class="formularioVerde1">
             <table>
                 <tr>
-                    <td><input type="text" name="usu_nom" size="20" placeholder="Nombre" required></td>
+                    <td><input class="anyadirComentarioTexto" type="text" name="usu_nom" size="20" placeholder="Nombre" required></td>
                 </tr>
                 <tr>
-                    <td><input type="text" name="usu_apellido" size="20" placeholder="Apellido" required></td>
+                    <td><input class="anyadirComentarioTexto" type="text" name="usu_apellido" size="20" placeholder="Apellido" required></td>
                 </tr>
                 <tr>
-                    <td><input type="email" name="usu_mail" size="20" placeholder="Email" required></td>
+                    <td><input class="anyadirComentarioTexto" type="email" name="usu_mail" size="20" placeholder="Email" required></td>
                 </tr>
                 <tr>
-                    <td><input type="tel" name="usu_telf" size="20" placeholder="Teléfono" required></td>
+                    <td><input class="anyadirComentarioTexto" type="tel" name="usu_telf" size="20" placeholder="Teléfono" required></td>
                 </tr>
                 <tr>
-                    <td><input type="password" name="usu_contra" size="20" required placeholder="Contraseña"></td>
+                    <td><input class="anyadirComentarioTexto" type="password" name="usu_contra" size="20" required placeholder="Contraseña"></td>
                 </tr>
                 <tr>
                     <td>
-                        <select name="usu_genero" required>
+                        <select class="anyadirComentario" name="usu_genero" required>
                             <option value="" disabled selected>Género</option>
                             <option value="M">Hombre</option>
                             <option value="F">Mujer</option>
@@ -34,7 +34,7 @@ include("components/include/nav.php")
                 </tr>
                 <tr>
                     <td>
-                        <select name="usu_nivel" required>
+                        <select class="anyadirComentario" name="usu_nivel" required>
                             <option value="" disabled selected>Nivel de Padel</option>
                             <option value="c">c</option>
                             <option value="c+">c+</option>
@@ -46,7 +46,7 @@ include("components/include/nav.php")
                     </td>
                 </tr>
                 <t>
-                    <td><input type="file" name="perfilImg" id="perfilImg"><br></td>
+                    <td><input class="anyadirComentario" type="file" name="perfilImg" id="perfilImg"><br></td>
                 </tr>
                 <tr>
                     <td><br><input class="anyadirComentario" type="submit" value="Registrarse"></td>

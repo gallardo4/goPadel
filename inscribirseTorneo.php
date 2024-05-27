@@ -23,7 +23,6 @@ if (!isset($_SESSION["usu_id"])) {
                         <select class="anyadirComentario" id="selectEquipos" name="equipos">
 
                         </select>
-                        <br><br>
                     </td>
                 </tr> 
 
@@ -38,7 +37,7 @@ if (!isset($_SESSION["usu_id"])) {
 
                 <tr>
                     <td>
-                        <input type="submit" value="Enviar">
+                        <input class="anyadirComentario" type="submit" value="Enviar">
                     </td>
                 </tr>
 
