@@ -45,7 +45,7 @@ session_start();
     if (isset($_SESSION['usu_img']) && isset($_SESSION['nomCompleto'])){
         echo "
         <div class=profileUser>
-            <img class=profileImg src=./components/pfpImg/$_SESSION[usu_telf].png> 
+            <img class=profileImg src=./components/pfpImg/$_SESSION[usu_img]> 
             <a href=userProfile.php class=userNameRedirection>". $_SESSION['nomCompleto'] ."</a>           
         </div>
         ";
