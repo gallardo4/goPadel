@@ -1,6 +1,7 @@
 <?php
 
 include("../include/database.php");
+include("../include/nav.php");
 
 session_start();
 
@@ -14,7 +15,14 @@ $comentario = $_POST['comentario'];
 
 $query = "INSERT INTO COMENTARIOS (id_profesor, id_alumno, texto_comentario) VALUES ($id_profesor, $id_alumno, '$comentario')";
 if (mysqli_query($conn, $query)) {
-    header("location: ../../usuarios.php?msg=Se ha añadido el comentario correctamente");
+    header("location: ../../comentarioRevision.php");
+    echo '<div class="comentario">
+    <h2></h2>
+    <p>Alumno: ' . $id_alumno . '</p>
+    <p>Profesor: ' . $id_profesor . '€</p>
+    <p>Comentario: ' . $comentario . 'h</p>
+  </div>';
+
 } else {
     echo mysqli_errno($conn);
 }
