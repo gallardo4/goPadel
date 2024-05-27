@@ -10,7 +10,7 @@ include("components/include/nav.php")
 
                 <tr>
                     <td>
-                    <select name="usu_company" id="usu_company">
+                    <select class="añadirComentario" name="usu_company" id="usu_company">
                         <option value="" disabled selected>Compañeros</option>
 
                     </select>
@@ -18,7 +18,7 @@ include("components/include/nav.php")
                 </tr>
 
                 <tr>
-                    <td><input type="text" name="equipo_nombre" size="20" placeholder="Nombre de equipo"></td>
+                    <td><input class="añadirComentarioTexto" type="text" name="equipo_nombre" size="20" placeholder="Nombre de equipo"></td>
                 </tr>
 
                 <tr>
@@ -40,17 +40,20 @@ include("components/include/nav.php")
         .then(response=>response.json())
         .then(data => {
             data.forEach(e => {
-                let option = document.createElement("option");
-                option.value=e['usu_id']
+                if(e['usu_id'] != <?php echo $_SESSION['usu_id'] ?>){
+                    let option = document.createElement("option");
+                    option.value=e['usu_id']
 
-                let texto = e['usu_mail']
+                    let texto = e['usu_mail']
 
-                texto = texto.split("@")
-            
-                console.log(texto[0])
+                    texto = texto.split("@")
+                
+                    console.log(texto[0])
 
-                option.textContent=texto[0];
-                selectCompany.appendChild(option)
+                    option.textContent=texto[0];
+                    selectCompany.appendChild(option)
+                }
+                
             });
         })
         .catch(error=>{

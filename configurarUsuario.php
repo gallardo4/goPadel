@@ -13,20 +13,20 @@ if (!isset($_SESSION['usu_id'])) {
     <div>
         <form id="formUpdateUser" class="formularioVerde2">
             <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="usu_nom" required><br>
+            <input class="añadirComentarioTexto" type="text" id="nombre" name="usu_nom" required><br>
 
             <label for="apellido">Apellido:</label>
-            <input type="text" id="apellido" name="usu_apellido" required><br>
+            <input class="añadirComentarioTexto" type="text" id="apellido" name="usu_apellido" required><br>
 
             <label for="genero">Género:</label>
-            <select id="genero" name="usu_genero" required>
+            <select class="añadirComentario" id="genero" name="usu_genero" required>
                 <option value="M">Masculino</option>
                 <option value="F">Femenino</option>
                 <option value="O">Otro</option>
             </select><br>
 
             <label for="nivel">Nivel:</label>
-            <select id="nivel" name="usu_nivel" required>
+            <select class="añadirComentario" id="nivel" name="usu_nivel" required>
                 <option value="c">c</option>
                 <option value="c+">c+</option>
                 <option value="b">b</option>
@@ -36,13 +36,13 @@ if (!isset($_SESSION['usu_id'])) {
             </select><br>
 
             <label for="puntuacion">Puntuación:</label>
-            <input type="number" id="puntuacion" name="usu_puntuacion" required><br>
+            <input class="añadirComentarioTexto" type="number" id="puntuacion" name="usu_puntuacion" required><br>
 
             <label for="telefono">Teléfono:</label>
-            <input type="text" id="telefono" name="usu_telf" required><br>
+            <input class="añadirComentarioTexto" type="text" id="telefono" name="usu_telf" required><br>
 
             <label for="email">Email de contacto:</label>
-            <input type="email" id="email" name="usu_mail" readonly><br><br>
+            <input class="añadirComentarioTexto" type="email" id="email" name="usu_mail" readonly><br><br>
 
             <button class="añadirComentario" type="submit">Actualizar</button>
         </form>
