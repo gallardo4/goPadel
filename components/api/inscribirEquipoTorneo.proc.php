@@ -8,6 +8,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET' && isset($_GET['equipos']) && isset($_GE
     $torneo_id = explode(" ",$_GET['torneos']);
     echo $torneo_id[0]."<br>";
 
+    $sqlExists = "SELECT EXISTS (SELECT 1 FROM )";
+
+    if(){
+
+    }
+
+
     $sql = "INSERT INTO EQUIPOS_TORNEO (torneo_id, equipo_id) VALUES ('$torneo_id[0]', '$equipo_id[0]')";
 
     if (mysqli_query($conn, $sql)) {
