@@ -56,6 +56,20 @@ session_start();
         <a class="indexA" href="index.php">Inicio</a>
         <a class="indexA" href="ranking.php">Ranking</a>
         <a class="indexA" href="profesores.php">Profesores</a>
+
+        <?php
+
+        if (isset($_SESSION["usu_type"]) && ($_SESSION["usu_type"]) != 'user'){
+
+        ?>
+        
+            <a class="indexA " href="usuarios.php">Usuarios</a>
+        
+        <?php
+
+        }
+
+        ?>
         <a class="indexA" href="reservarPista.php">Reservar Pista</a>
         <a class="indexA" href="reservarClase.php">Reservar Clase</a>
         <a class="indexA" href="inscribirseTorneo.php">Inscribirse a Torneo</a>
