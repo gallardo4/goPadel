@@ -29,6 +29,14 @@ include("components/include/nav.php")
         </form>
     </section>
 
+    <?php
+
+    if(isset($_GET['msg'])){
+            echo "<h3>$_GET[msg] </h3>";
+    }
+
+    ?>
+
     <script>
 
         <?php

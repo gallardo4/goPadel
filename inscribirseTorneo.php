@@ -15,12 +15,21 @@ if (!isset($_SESSION["usu_id"])) {
     <section class="formularios">
     <h2>Inscripción Torneo</h2>
 
-        <form action="pagarClase.php" method="POST" class="formularioVerde">
+        <form action="./components/api/inscribirEquipoTorneo.proc.php" method="POST" class="formularioVerde">
             <table>
                 
                 <tr>
                     <td>
-                        <select class="anyadirComentario" name="torneosDisponibles">
+                        <select class="anyadirComentario" id="selectEquipos" name="equipos">
+
+                        </select>
+                        <br><br>
+                    </td>
+                </tr> 
+
+                <tr>
+                    <td>
+                        <select class="anyadirComentario" id="selectTorneo" name="torneos">
 
                         </select>
                         <br><br>
@@ -29,10 +38,7 @@ if (!isset($_SESSION["usu_id"])) {
 
                 <tr>
                     <td>
-                        <select class="anyadirComentario" name="tusEquipos">
-
-                        </select>
-                        <br><br>
+                        <input type="submit" value="Enviar">
                     </td>
                 </tr>
 
@@ -42,10 +48,41 @@ if (!isset($_SESSION["usu_id"])) {
     </section>
 
     <script>
+
+    fetch("components/api/verEquipos.proc.php?usu_id_1=<?php echo $_SESSION['usu_id'] ?>")
+        .then(response => response.json())
+        .then(data => {
+            console.log(data)
+
+            if(data.length==0){
+                window.location="./crearEquipo.php?msg=No tienes equipo! Crea uno."
+            }            
+
+            data.forEach(e => {
+                let select = document.getElementById("selectEquipos");
+                let optionEquipo = document.createElement("option");
+                optionEquipo.innerHTML = `<option value=${e.equipo_id}> ${e.equipo_nombre} </option>`;
+
+                select.appendChild(optionEquipo)
+            });
+        });    
+
+        fetch("components/api/verTorneos.proc.php")
+        .then(response => response.json())
+        .then(torneo => {
+            console.log(torneo)           
+
+            torneo.forEach(t => {
+                let select = document.getElementById("selectTorneo");
+                let optionTorneo = document.createElement("option");
+                optionTorneo.innerHTML = `<option value=${t.torneo_nom}> ${t.torneo_nom} </option>`;
+
+                select.appendChild(optionTorneo)
+            });
+        });    
         
     </script>
 <?php
 }
-
 include("components/include/footer.html");
 ?>
