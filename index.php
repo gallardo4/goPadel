@@ -87,7 +87,7 @@ include("components/include/nav.php")
                 <br>
                 Son muy buenos los trabajadores, estupendo trato hacia los clientes. Un día jugué un torneo en el que me inscribió mi profesor, una auténtica pasada, lo pasamos en grande además de hacer nuevos amigos con los que podré pasar rato jugando a pádel.
                 <br>
-                <img src="components/src/conentoOjos.png" alt="contento" style="width:70px; height: 70px;">
+                <img src="components/src/contentoOjos.png" alt="contento" style="width:70px; height: 70px;">
             </p>
         </div>
         <div class="testimonial">
@@ -125,7 +125,7 @@ include("components/include/nav.php")
                 <br>
                 La primera vez que tomé una clase aquí, supe que era el lugar adecuado para mejorar mi juego. Los profesores son increíbles y te motivan a dar lo mejor de ti. ¡Recomendado al 100%!
                 <br>
-                <img src="components/src/conentoOjos.png" alt="contento"  style="width:70px; height: 70px;">
+                <img src="components/src/contentoOjos.png" alt="contento"  style="width:70px; height: 70px;">
             </p>
         </div>
         <div class="testimonial">
