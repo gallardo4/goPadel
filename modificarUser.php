@@ -18,27 +18,27 @@ if (!isset($_SESSION['usu_id'])) {
             <input type="hidden" name="usu_id" value="<?php echo $_GET['usu_id'] ?>">
 
             <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="usu_nom" required><br>
+            <input class="anyadirComentarioTexto" type="text" id="nombre" name="usu_nom" required><br>
 
             <label for="apellido">Apellido:</label>
-            <input type="text" id="apellido" name="usu_apellido" required><br>
+            <input class="anyadirComentarioTexto" type="text" id="apellido" name="usu_apellido" required><br>
 
             <label for="genero">Género:</label>
-            <select id="genero" name="usu_genero" required>
+            <select class="anyadirComentario" id="genero" name="usu_genero" required>
                 <option value="M">Masculino</option>
                 <option value="F">Femenino</option>
                 <option value="O">Otro</option>
             </select><br>
 
             <label for="usu_type">Tipo de usuario: </label>
-            <select name="usu_type" id="usu_type">
+            <select class="anyadirComentario" name="usu_type" id="usu_type">
                 <option value="admin">Admin</option>
                 <option value="user">User</option>
                 <option value="prof">Profesor</option>
             </select><br>
 
             <label for="nivel">Nivel:</label>
-            <select id="nivel" name="usu_nivel" required>
+            <select class="anyadirComentario" id="nivel" name="usu_nivel" required>
                 <option value="c">c</option>
                 <option value="c+">c+</option>
                 <option value="b">b</option>
@@ -48,10 +48,10 @@ if (!isset($_SESSION['usu_id'])) {
             </select><br>
 
             <label for="telefono">Teléfono:</label>
-            <input type="text" id="telefono" name="usu_telf" required><br>
+            <input class="anyadirComentarioTexto" type="text" id="telefono" name="usu_telf" required><br>
 
             <label for="email">Email de contacto:</label>
-            <input type="email" id="email" name="usu_mail" readonly><br><br>
+            <input class="anyadirComentarioTexto" type="email" id="email" name="usu_mail" readonly><br><br>
 
             <button class="anyadirComentario" type="submit">Actualizar</button>
         </form>
