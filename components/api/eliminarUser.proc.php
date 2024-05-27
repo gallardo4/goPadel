@@ -8,19 +8,15 @@ if(isset($_REQUEST['usu_id']) && isset($_SESSION['usu_type']) && $_SESSION['usu_
     $usu_id = $_REQUEST['usu_id'];
     
     echo $usu_id."<br>";
+
     $sql="DELETE FROM USUARI WHERE usu_id = $usu_id;";
+
     $result = mysqli_query($conn,$sql);
+
 
     if($result){
         echo "HA FUNCIONADO";
     }else{
         echo "NO HA FUNCIONADO";
     }
-
-    /*if(mysqli_num_rows($result) > 0){
-        while($row = mysqli_fetch_assoc($result)){
-            $userData[] = $row;
-            echo $row['usu_nom'];
-        }
-    }*/
 }
