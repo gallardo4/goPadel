@@ -61,7 +61,7 @@ if (!isset($_SESSION["usu_id"])) {
                     if (isset($_SESSION['usu_type']) && $_SESSION['usu_type']=='admin' ) {
                         ?>
                         
-                        <td><a class=anyadirComentario href=ponerComentario.php?usu_id=${usuario.usu_id}>anyadir Comentario</a></td>
+                        <td><a class=anyadirComentario href=ponerComentario.php?usu_id=${usuario.usu_id}>Añadir Comentario</a></td>
                         <td><a class=anyadirComentario href=./components/api/eliminarUser.proc.php?usu_id=${usuario.usu_id}>Eliminar</a></td>
                         <td><a class=anyadirComentario href=./modificarUser.php?usu_id=${usuario.usu_id}>Modificar</a></td>
 
@@ -71,7 +71,7 @@ if (!isset($_SESSION["usu_id"])) {
                     }elseif (isset($_SESSION['usu_type']) && $_SESSION['usu_type']!='user') {
                         ?>
                         
-                        <td><a class=anyadirComentario href=ponerComentario.php?usu_id=${usuario.usu_id}>anyadir Comentario</a></td>
+                        <td><a class=anyadirComentario href=ponerComentario.php?usu_id=${usuario.usu_id}>Añadir Comentario</a></td>
                     
                         <?php
                     }
