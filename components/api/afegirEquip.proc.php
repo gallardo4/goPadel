@@ -24,7 +24,7 @@ $arrayResult = mysqli_fetch_array($resultExists);
 
 if($arrayResult[0] == 1){
 
-    header("Location: ../../login.php?msg=Nombre de equipo ya en úso.");
+    header("Location: ../../crearEquipo.php?msg=Nombre de equipo ya en úso.");
 
 }else{
 
