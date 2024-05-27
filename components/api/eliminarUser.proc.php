@@ -15,8 +15,8 @@ if(isset($_REQUEST['usu_id']) && isset($_SESSION['usu_type']) && $_SESSION['usu_
 
 
     if($result){
-        echo "HA FUNCIONADO";
+        header("location: ../../usuarios.php?msg=Usuario elminiado con éxito.");
     }else{
-        echo "NO HA FUNCIONADO";
+        header("location: ../../usuarios.php?msg=No se ha podido eliminar el usuario.");
     }
 }
