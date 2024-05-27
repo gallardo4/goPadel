@@ -1,6 +1,8 @@
 <?php
 include("components/include/nav.php");
 
+include("components/include/database.php");
+
 if (!isset($_GET['usu_id'])) {
     die("No se especificó ningún usuario.");
 }
@@ -10,6 +12,19 @@ $usu_id = intval($_GET['usu_id']);
 
 <section>
     <h2>Añadir Comentario</h2>
+
+<?php
+    $sql = "SELECT texto_comentario FROM COMENTARIOS WHERE alumn_id = $usu_id";
+    $result = $conn->query($sql);
+?>
+
+<section>
+    <h2>Comentarios del Usuario</h2>
+    <table id="tablaComentarios" border="1">
+
+       
+    </table>
+</section>
 
     <form action="./components/api/ponerComentario.proc.php" method="POST">
         <input type="hidden" name="alumn_id" value="<?php echo $usu_id; ?>">
@@ -24,6 +39,36 @@ $usu_id = intval($_GET['usu_id']);
     </form>
 </section>
 
+<script>
+    fetch(`./components/api/verComentarios.proc.php?alumnID=<?php echo $_GET['usu_id']; ?>`)
+            .then(response=>response.json())
+            .then(comData => {
+
+                if(comData.length!=0){
+                    const tablaComentarios = document.getElementById('tablaComentarios');
+                    tablaComentarios.innerHTML = ''; 
+                    comData.forEach(comentario => {
+                        console.log(comentario)
+                        const row = document.createElement('tr');
+                        row.innerHTML = `
+                            <td> ${comentario.texto_comentario}</td>
+                    `;
+                    tablaComentarios.appendChild(row);
+                })
+                }else{
+                    const tablaComentarios = document.getElementById('tablaComentarios');
+                    tablaComentarios.innerHTML = '';
+                    const row = document.createElement('tr');
+                        row.innerHTML = `
+                            <td colspan="3">No tienes ningun comentario</td>
+                        `;
+                        tablaComentarios.appendChild(row);
+                }
+                
+        })
+</script>
+
 <?php
+$conn->close();
 include("components/include/footer.html");
 ?>
