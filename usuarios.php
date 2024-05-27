@@ -14,6 +14,8 @@ if (!isset($_SESSION["usu_id"])) {
 ?>
     <h2>Lista Usuarios</h2>
     <br>
+    <a class='añadirComentario' href='crearUser.php'>Modificar</a>
+    <br>
     <table class='tablaProfYRank' border=1>
         <thead>
             <tr>
@@ -49,7 +51,7 @@ if (!isset($_SESSION["usu_id"])) {
             data.forEach(usuario => {
                 const row = document.createElement('tr');
                 row.innerHTML = `
-                    <td><img src='components/pfpImg/${usuario.usu_img}'></td>
+                    <td><img style="width:60px; height:60px" src='components/pfpImg/${usuario.usu_img}'></td>
                     <td>${usuario.usu_apellido}</td>
                     <td>${usuario.usu_nom}</td>
                     <td>${usuario.usu_mail}</td>
@@ -61,7 +63,7 @@ if (!isset($_SESSION["usu_id"])) {
                         
                         <td><a class=añadirComentario href=ponerComentario.php?usu_id=${usuario.usu_id}>Añadir Comentario</a></td>
                         <td><a class=añadirComentario href=./components/api/eliminarUser.proc.php?usu_id=${usuario.usu_id}>Eliminar</a></td>
-                        <td><a class=añadirComentario href=./components/api/modificarUser.proc.php?usu_id=${usuario.usu_id}>Modificar</a></td>
+                        <td><a class=añadirComentario href=./modificarUser.php?usu_id=${usuario.usu_id}>Modificar</a></td>
 
                         <?php
                     

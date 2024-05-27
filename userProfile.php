@@ -13,43 +13,6 @@ include("components/include/nav.php");
 <a class="añadirComentario" href="configurarUsuario.php">Configurar Usuario</a>
     
 <br><br><br>
-
-<div id="infoEquipo">
-    <h3>Equipos en los que participa:</h3>
-    <table class='tablaProfYRank'>
-        <thead>
-            <tr>
-                <th>Nombre Equipo</th>
-                <th colspan="2">Miembros del equipo</th>
-            </tr>
-        </thead>
-        <tbody id="tablaEquipo">
-        </tbody>
-        <tfoot id="tablaEquipo-foot">
-        </tfoot>
-    </table>
-</div>
-
-<br>
-
-<div id="infoComentarios">
-    <h3>Comentarios de profesores:</h3>
-    <table class='tablaProfYRank'>
-        <thead>
-            <tr>
-                <th>Profesor</th>
-                <th>Comentario</th>
-            </tr>
-        </thead>
-        <tbody id="tablaComentarios">
-        </tbody>
-        <tfoot id="tablaComentarios-foot">
-        </tfoot>
-    </table>
-</div>
-
-<br>
-
 <div id="infoClases">
     <h3>Clases a las que estas apuntado:</h3>
     <table class='tablaProfYRank'>
@@ -88,6 +51,46 @@ include("components/include/nav.php");
         </tfoot>
     </table>
 </div>
+
+<br>
+
+
+<div id="infoEquipo">
+    <h3>Equipos en los que participa:</h3>
+    <table class='tablaProfYRank'>
+        <thead>
+            <tr>
+                <th>Nombre Equipo</th>
+                <th colspan="2">Miembros del equipo</th>
+            </tr>
+        </thead>
+        <tbody id="tablaEquipo">
+        </tbody>
+        <tfoot id="tablaEquipo-foot">
+        </tfoot>
+    </table>
+</div>
+
+<br>
+
+<div id="infoComentarios">
+    <h3>Comentarios de profesores:</h3>
+    <table class='tablaProfYRank'>
+        <thead>
+            <tr>
+                <th>Profesor</th>
+                <th>Comentario</th>
+            </tr>
+        </thead>
+        <tbody id="tablaComentarios">
+        </tbody>
+        <tfoot id="tablaComentarios-foot">
+        </tfoot>
+    </table>
+</div>
+
+
+
 <script>
     fetch(`./components/api/verUsuarios.proc.php?usu_id=<?php echo $_SESSION['usu_id']; ?>`)
         .then(response=>response.json())
@@ -191,7 +194,7 @@ include("components/include/nav.php");
                 
         })
 
-        fetch(`./components/api/verReservas.proc.php?type=clase`)
+        fetch(`./components/api/verReservaPropia.proc.php?type=clase`)
             .then(response=>response.json())
             .then(claseReservas => {
                 console.log(claseReservas)
@@ -221,7 +224,7 @@ include("components/include/nav.php");
                 
         })
 
-        fetch(`./components/api/verReservas.proc.php?type=pista`)
+        fetch(`./components/api/verReservaPropia.proc.php?type=pista`)
             .then(response=>response.json())
             
             .then(pistaReservas => {

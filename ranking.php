@@ -7,7 +7,7 @@ include("components/include/nav.php");
         <thead>
             <tr>
                 <th>Imágen Perfil</th>
-                <th>Apellido</th>
+                <th >Apellido</th>
                 <th>Nombre</th>
                 <th>Nivel</th>
                 <th>Puntuación</th>
@@ -29,7 +29,7 @@ include("components/include/nav.php");
             data.forEach(usuario => {
                 const row = document.createElement('tr');
                 row.innerHTML = `
-                    <td><img src='components/pfpImg/${usuario.usu_img}'></td>
+                    <td><img style="width:60px; height:60px" src='components/pfpImg/${usuario.usu_img}'></td>
                     <td>${usuario.usu_apellido}</td>
                     <td>${usuario.usu_nom}</td>
                     <td>${usuario.usu_nivel}</td>

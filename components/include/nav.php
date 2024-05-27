@@ -45,7 +45,7 @@ session_start();
     if (isset($_SESSION['usu_img']) && isset($_SESSION['nomCompleto'])){
         echo "
         <div class=profileUser>
-            <img class=profileImg src=./components/pfpImg/".$_SESSION['usu_img']."> 
+            <img class=profileImg src=./components/pfpImg/$_SESSION[usu_telf].png> 
             <a href=userProfile.php class=userNameRedirection>". $_SESSION['nomCompleto'] ."</a>           
         </div>
         ";
@@ -56,7 +56,6 @@ session_start();
         <a class="indexA" href="index.php">Inicio</a>
         <a class="indexA" href="ranking.php">Ranking</a>
         <a class="indexA" href="profesores.php">Profesores</a>
-        <a class="indexA" href="usuarios.php">Usuarios</a>
         <a class="indexA" href="reservarPista.php">Reservar Pista</a>
         <a class="indexA" href="reservarClase.php">Reservar Clase</a>
         <a class="indexA" href="inscribirseTorneo.php">Inscribirse a Torneo</a>
