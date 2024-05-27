@@ -15,7 +15,7 @@ if (!isset($_SESSION["usu_id"])) {
     <section class="formularios">
     <h2>Inscripción Torneo</h2>
 
-        <form action="./components/api/inscribirEquipoTorneo.proc.php" method="POST" class="formularioVerde">
+        <form action="./components/api/inscribirEquipoTorneo.proc.php" method="GET" class="formularioVerde">
             <table>
                 
                 <tr>
@@ -61,7 +61,7 @@ if (!isset($_SESSION["usu_id"])) {
             data.forEach(e => {
                 let select = document.getElementById("selectEquipos");
                 let optionEquipo = document.createElement("option");
-                optionEquipo.innerHTML = `<option value=${e.equipo_id}> ${e.equipo_nombre} </option>`;
+                optionEquipo.innerHTML = `<option> ${e.equipo_id} - ${e.equipo_nombre} </option>`;
 
                 select.appendChild(optionEquipo)
             });
@@ -75,7 +75,7 @@ if (!isset($_SESSION["usu_id"])) {
             torneo.forEach(t => {
                 let select = document.getElementById("selectTorneo");
                 let optionTorneo = document.createElement("option");
-                optionTorneo.innerHTML = `<option value=${t.torneo_nom}> ${t.torneo_nom} </option>`;
+                optionTorneo.innerHTML = `<option value=${t.torneo_id}>${t.torneo_id} - ${t.torneo_nom} </option>`;
 
                 select.appendChild(optionTorneo)
             });
@@ -83,6 +83,11 @@ if (!isset($_SESSION["usu_id"])) {
         
     </script>
 <?php
+
+}
+
+if(isset($_GET['msg'])){
+    echo "<br><p>$_GET[msg]</p>";
 }
 include("components/include/footer.html");
 ?>
