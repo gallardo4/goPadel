@@ -113,6 +113,22 @@ h1{
     cursor: pointer;
 }
 
+.añadirComentarioTexto {
+    color: blue;
+    text-decoration: none;
+    padding: 5px 10px;
+    border: 1px solid blue;
+    border-radius: 5px;
+    background-color: lightblue;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.añadirComentarioTexto:hover {
+    background-color: blue;
+    color: white;
+    cursor: text;
+}
+
 .iniciaSesion {
     color: blue;
     text-decoration: none;
@@ -382,4 +398,22 @@ span{
 
 #formUpdateUser input, #formUpdateUser select {
     display: block;
+}
+
+.reserva {
+    background-color: #FAFBF7;  /* Fondo claro */
+    padding: 20px;
+    font-size: 15px;
+    color: black;
+    text-align: center;
+    margin: 40px 0;
+    border-radius: 15px;  /* Esquinas redondeadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Sombra para dar profundidad */
+}
+.reserva h2 {
+    margin-top: 0;  /* Eliminar margen superior */
+}
+.reserva p {
+    margin: 10px 0;  /* Margen entre párrafos */
+    /*font-weight: bold;  /* Texto en negrita */
 }
