@@ -40,17 +40,20 @@ include("components/include/nav.php")
         .then(response=>response.json())
         .then(data => {
             data.forEach(e => {
-                let option = document.createElement("option");
-                option.value=e['usu_id']
+                if(e['usu_id'] != <?php echo $_SESSION['usu_id'] ?>){
+                    let option = document.createElement("option");
+                    option.value=e['usu_id']
 
-                let texto = e['usu_mail']
+                    let texto = e['usu_mail']
 
-                texto = texto.split("@")
-            
-                console.log(texto[0])
+                    texto = texto.split("@")
+                
+                    console.log(texto[0])
 
-                option.textContent=texto[0];
-                selectCompany.appendChild(option)
+                    option.textContent=texto[0];
+                    selectCompany.appendChild(option)
+                }
+                
             });
         })
         .catch(error=>{
