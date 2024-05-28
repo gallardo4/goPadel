@@ -53,7 +53,7 @@ if (!isset($_SESSION['usu_id'])) {
                 <option value="professional">professional</option>
             </select><br>
 
-            <label for="puntuacion">Puntuación</label>
+            <label for="puntuacion">Puntuación:</label>
             <input class="anyadirComentarioTexto" type="text" name="usu_puntuacion" id="puntuacion"><br>
 
             <label for="telefono">Teléfono:</label>
