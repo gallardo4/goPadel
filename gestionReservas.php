@@ -46,7 +46,7 @@ if (!isset($_SESSION["usu_id"])) {
                     <td>${pista.nombre_usuario} ${pista.apellido_usuario}</td>
                     <td>Num. ${pista.pista_id}</td>
                     <td>${pista.fecha_dia}</td>
-                    <td>${pista.hora}</td>
+                    <td>${pista.hora} - ${parseInt(pista.hora)+2}</td>
                     <td><a class="anyadirComentario" href="./components/api/borrarReservaPista.proc.php?pista_id=${pista.pista_id}&usu_id=${pista.usu_id}&hora=${pista.hora}">Borrar Reserva</td>
                     
                 `;
