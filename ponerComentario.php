@@ -20,7 +20,7 @@ $usu_id = intval($_GET['usu_id']);
 
 <section>
     <h3>Comentarios del Usuario</h3>
-    <table id="tablaComentarios" border="1">
+    <table class="tablaProfYRank" id="tablaComentarios" border="1">
 
        
     </table>
