@@ -70,7 +70,8 @@ if (!isset($_SESSION['usu_id'])) {
 <script>
     let form = document.getElementById('formUpdateUser');
 
-    fetch(`./components/api/verUsuarios.proc.php?usu_id=<?php echo $_GET['usu_id'] ?>`)
+    document.addEventListener("DOMContentLoaded", () => {
+        fetch(`./components/api/verUsuarios.proc.php?usu_id=<?php echo $_GET['usu_id'] ?>`)
         .then(response => response.json())
         .then(data => {
 
@@ -116,6 +117,7 @@ if (!isset($_SESSION['usu_id'])) {
 
             let formEmail = document.getElementById('email');
             formEmail.value = email
+        });
     });
 
 </script>
