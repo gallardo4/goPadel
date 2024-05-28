@@ -19,8 +19,20 @@ if (!isset($_SESSION["usu_id"])) {
             echo "<h3>".$_REQUEST['msg']."</h3>";
         }
     ?>
-    <br>
-    <a class='anyadirComentario' href='crearUser.php'>Crear nuevo usuario</a>
+    
+    <?php
+
+    if (isset($_SESSION['usu_type']) && $_SESSION['usu_type'] != 'user') {
+        ?>
+
+        <br>
+        <a class='anyadirComentario' href='crearUser.php'>Crear nuevo usuario</a>
+
+        <?php
+    }
+
+    ?>
+
     <br>
     <table class='tablaProfYRank' border=1>
         <thead>
@@ -28,9 +40,12 @@ if (!isset($_SESSION["usu_id"])) {
                 <th>Imágen Perfil</th>
                 <th>Apellido</th>
                 <th>Nombre</th>
-                <th>Email</th>
-                <th>Teléfono de Contacto</th>
                 <?php
+
+                    if (isset($_SESSION['usu_type']) && $_SESSION['usu_type'] != 'user') {
+                        echo "<th>Email</th>";
+                        echo "<th>Teléfono de Contacto</th>";
+                    }
 
                     if (isset($_SESSION['usu_type']) && $_SESSION['usu_type']=='prof') {
                         echo "<th>Comentario</th>";
@@ -62,13 +77,14 @@ if (!isset($_SESSION["usu_id"])) {
                     <td><img style="width:60px; height:60px" src='components/pfpImg/${usuario.usu_img}'></td>
                     <td>${usuario.usu_apellido}</td>
                     <td>${usuario.usu_nom}</td>
-                    <td>${usuario.usu_mail}</td>
-                    <td>${usuario.usu_telf}</td>
+
                     <?php
 
                     if (isset($_SESSION["usu_type"]) && $_SESSION["usu_type"]=='prof') {
                         ?>
 
+                        <td>${usuario.usu_mail}</td>
+                        <td>${usuario.usu_telf}</td>
                         <td><a class=anyadirComentario href=ponerComentario.php?usu_id=${usuario.usu_id}>Añadir Comentario</a></td>
 
                         <?php
@@ -77,18 +93,14 @@ if (!isset($_SESSION["usu_id"])) {
                     if (isset($_SESSION['usu_type']) && $_SESSION['usu_type']=='admin' ) {
                         ?>
                         
+                        <td>${usuario.usu_mail}</td>
+                        <td>${usuario.usu_telf}</td>
                         <td><a class=anyadirComentario href=./components/api/eliminarUser.proc.php?usu_id=${usuario.usu_id}>Eliminar</a></td>
                         <td><a class=anyadirComentario href=./modificarUser.php?usu_id=${usuario.usu_id}>Modificar</a></td>
 
                         <?php
                     
                     
-                    }elseif (isset($_SESSION['usu_type']) && $_SESSION['usu_type']=='user') {
-                        ?>
-                        
-                        <td><a class=anyadirComentario href=ponerComentario.php?usu_id=${usuario.usu_id}>Añadir Comentario</a></td>
-                    
-                        <?php
                     }
 
                     ?>
