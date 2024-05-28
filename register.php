@@ -5,7 +5,7 @@ include("components/include/nav.php")
     <section class="formularios">
         <h2>Registrarse</h2> 
 
-        <form action="./components/api/afegirUser.proc.php" method="POST" enctype="multipart/form-data" class="formularioVerde1">
+        <form action="./components/api/afegirUser.proc.php" onsubmit="comprovarContrasenya(event)" method="POST" enctype="multipart/form-data" class="formularioVerde1">
             <table>
                 <tr>
                     <td><input class="anyadirComentarioTexto" type="text" name="usu_nom" size="20" placeholder="Nombre" required></td>
@@ -20,7 +20,7 @@ include("components/include/nav.php")
                     <td><input class="anyadirComentarioTexto" type="tel" name="usu_telf" size="20" placeholder="Teléfono" required></td>
                 </tr>
                 <tr>
-                    <td><input class="anyadirComentarioTexto" type="password" name="usu_contra" size="20" required placeholder="Contraseña"></td>
+                    <td><input class="anyadirComentarioTexto" type="password" id="usu_contra" name="usu_contra" size="20" required placeholder="Contraseña"></td>
                 </tr>
                 <tr>
                     <td>
@@ -55,6 +55,106 @@ include("components/include/nav.php")
         </form>
     </section>
 
+    <script>
+
+        function comprovarContrasenya(event){
+            let inputPassword = document.getElementById("usu_contra");
+
+            let password = inputPassword.value;
+
+            let longitud = false;
+            let mayusculas = false;
+            let minusculas = false;
+            let numeºros = false;
+
+
+            longitud = comprovarLongitud(password);
+            mayusculas = comprovarMayus(password);
+            minusculas = comprovarMins(password);
+            numeros = comprovarNums(password);
+
+
+            if(!longitud){
+                event.preventDefault();
+                alert("la contraseña es demasiado corta")
+            }
+
+            if(!mayusculas){
+                event.preventDefault();
+                alert("Tiene que tener minimo una mayuscula.")
+            }
+
+            if(!minusculas){
+                event.preventDefault();
+                alert("Tiene que tener minimo 2 minusculas.")
+            }
+
+            if(!numeros){
+                event.preventDefault();
+                alert("Tiene que tener minimo 1 numero.")
+            }
+
+            
+
+        }
+
+        function comprovarLongitud(contraseña){
+            longitudPalabra = contraseña.length;
+
+            if(longitudPalabra<=20 && longitudPalabra>=8){
+                return true;
+            }
+            return false;
+        }
+
+        function comprovarMayus(contraseña){
+            var contador = 0;
+
+            for (let i = 0; i < contraseña.length; i++) {
+                if (contraseña[i]==contraseña[i].toUpperCase() && isNaN(contraseña[i])) {
+                    contador++;
+                }
+            }
+
+            console.log(contador);
+            
+            if(contador>0){
+                return true
+            }
+
+            return false
+        }
+
+        function comprovarMins(contraseña){
+            var contador = 0;
+
+            for (let i = 0; i < contraseña.length; i++) {
+                if (contraseña[i]==contraseña[i].toLowerCase() && isNaN(contraseña[i])) {
+                    contador++;
+                }
+            }
+            console.log(contador);
+
+            if(contador>=2){
+                return true
+            }
+            return false
+        }
+
+        function comprovarNums(contraseña){
+            var num = 0;
+            for (let i = 0; i < contraseña.length; i++) {
+                if (!isNaN(contraseña[i])) {
+                    num++;
+                }
+            }
+            if(num>0){
+                return true
+            }
+            return false    
+        }
+
+    </script>
 
 <?php
 include("components/include/footer.html")

@@ -9,6 +9,12 @@ if (!isset($_SESSION['usu_id'])) {
 
 <section class="formularios">
     <h2>Configurar Usuario</h2>
+
+    <?php
+        if(isset($_REQUEST['msg'])){
+            echo "<h3>".$_REQUEST['msg']."</h3>";
+        }
+    ?>
     
     <div>
         <form id="formUpdateUser" class="formularioVerde2">
@@ -88,9 +94,9 @@ if (!isset($_SESSION['usu_id'])) {
             .then(data => {
                 console.log("Datos recibidos: ", data);
                 if (data.success) {
-                    alert('Usuario actualizado correctamente.');
+                    window.location = "./configurarUsuario.php?msg=Usuario actualizado correctamente"
                 } else {
-                    alert('Error al actualizar usuario: ' + data.message);
+                    window.location = "./configurarUsuario.php?msg=No se ha podido actualizar el usuario"
                 }
             })
             .catch(error => {

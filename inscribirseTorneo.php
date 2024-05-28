@@ -15,7 +15,7 @@ if (!isset($_SESSION["usu_id"])) {
     <section class="formularios">
     <h2>Inscripción Torneo</h2>
 
-        <form action="./components/api/inscribirEquipoTorneo.proc.php" method="GET" class="formularioVerde">
+        <form action="./components/api/inscribirEquipoTorneo.proc.php" method="GET" class="formularioVerde1">
             <table>
                 
                 <tr>
