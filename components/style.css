@@ -148,7 +148,14 @@ h1{
     padding: 20px;
     background-color: #F9FAEF;
     min-height: 100%;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(255, 255, 0, 0.5),
+        rgba(0, 0, 255, 0.5)
+      ), url("./src/torneo.jpg");
+
 }
+
 
 .sectionPresentacion {
     background: #f9f9f9;
@@ -216,7 +223,11 @@ section p {
     display: block  ;
     justify-content: center;
     align-items: center;
-
+    background-image: linear-gradient(
+        to bottom,
+        rgba(255, 255, 0, 0.5),
+        rgba(0, 0, 255, 0.5)
+    ), url("./src/padel.jpg");
 }
 
 #gestionBotones{

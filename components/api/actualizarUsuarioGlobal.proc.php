@@ -41,7 +41,7 @@ if(!$stmt){
     $stmt-> execute();
 }
 
-header('location: ../../index.php');
+header('location: ../../modificarUser.php?msg=Usuario modificado con éxito');
 
 
 
