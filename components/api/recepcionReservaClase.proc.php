@@ -1,7 +1,7 @@
 <?php
-include("components/include/nav.php");
 
-include("components/include/database.php");
+include("../include/database.php");
+session_start();
 
 if($_SERVER['REQUEST_METHOD'] == 'GET' && isset($_GET['hora']) && isset($_GET['pistaID']) && isset($_GET['nivel']) && isset($_SESSION['usu_id']) && isset($_GET['claseID']) && isset($_GET['res_fecha'])){
     
@@ -22,10 +22,7 @@ if($_SERVER['REQUEST_METHOD'] == 'GET' && isset($_GET['hora']) && isset($_GET['p
 
     if($arrayResult[0] >= 1){
 
-        echo '<div style="border: 2px solid red; padding: 20px; font-size: 20px; color: red; text-align: center; margin: 40px 0;">
-        <h2>NO SE HA PODIDO ACCEDER A LA CLASE</h2>
-        <p>ERROR: ' . mysqli_error($conn) . '</p>
-      </div>';
+        header("location: ../../mensajeApuntarse.php?valido=false");
 
     }else{
 
@@ -33,13 +30,10 @@ if($_SERVER['REQUEST_METHOD'] == 'GET' && isset($_GET['hora']) && isset($_GET['p
 
         mysqli_query($conn, $sql);
 
-        echo '<div class="reserva">
-        <h2>ACCESO A LA CLASE</h2>
-        <p>Pista: ' . $pista_id . '</p>
-        <p>Fecha Reserva: ' . $fecha_dia . '</p>
-        <p>Precio: ' . $precio_clase . '€</p>
-        <p>Hora: ' . $hora . 'h</p>
-      </div>';
+        header("location: ../../mensajeApuntarse.php?valido=true&pista_id=$pista_id&fecha_dia=$fecha_dia&precio_clase=$precio_clase&hora=$hora&nivel=$nivel");
+
+
+
     }
 
 

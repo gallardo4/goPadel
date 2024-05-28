@@ -64,7 +64,7 @@ if (!isset($_SESSION["usu_id"])) {
                 const row = document.createElement('tr');
                 row.innerHTML = `
 
-                    <form id="${form}" method="GET" action="recepcionReservaClase.php"><input type="hidden" name="id" value="1">                   
+                    <form id="${form}" method="GET" action="components/api/recepcionReservaClase.proc.php"><input type="hidden" name="id" value="1">                   
                         <input form="${form}" type="hidden" name="hora" value="${clase.clase_hora}">
                         <input form="${form}" type="hidden" name="nivel" value="${clase.clase_nivel}">
                         <input form="${form}" type="hidden" name="claseID" value="${clase.clase_id}">

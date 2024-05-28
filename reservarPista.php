@@ -16,7 +16,7 @@ if (!isset($_SESSION["usu_id"])) {
     <section class="formularios">
         <h2>Reservar Pista</h2>
 
-        <form action="recepcionReservaPista.php" method="POST" class="formularioVerde">
+        <form action="components/api/recepcionReservaPista.proc.php" method="POST" class="formularioVerde">
             <table>
                 <tr>
                     <td><input class="anyadirComentarioTexto" type="number" name="pista_id" max="10" min="1" placeholder="Pista" required></td>
