@@ -48,7 +48,7 @@ if (!isset($_SESSION["usu_id"])) {
                     <td>${clase.nombre_alumno} ${clase.apellido_alumno}</td>
                     <td>Num. ${clase.pista_id}</td>
                     <td>${clase.fecha_dia}</td>
-                    <td>${clase.hora}</td>
+                    <td>${clase.hora} - ${parseInt(clase.hora)+2}</td>
                     <td><a class="anyadirComentario" href="./components/api/borrarReservaClase.proc.php?clase_id=${clase.clase_id}&usu_id=${clase.usu_id}&hora=${clase.hora}">Borrar Reserva</td>
                     
                 `;
