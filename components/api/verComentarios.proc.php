@@ -19,6 +19,7 @@ header("Content-Type: application/json");
 echo json_encode($userData);
 }
 
+// API VER A PARTIR DEL ALUMNO ID 
 
 if($_SERVER['REQUEST_METHOD'] == "GET" && isset($_GET['alumnID'])) {
 
