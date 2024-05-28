@@ -47,7 +47,7 @@ if (!isset($_SESSION["usu_id"])) {
                         echo "<th>Teléfono de Contacto</th>";
                     }
 
-                    if (isset($_SESSION['usu_type']) && $_SESSION['usu_type'] != 'prof') {
+                    if (isset($_SESSION['usu_type']) && $_SESSION['usu_type'] != 'user') {
                         echo "<th>Comentario</th>";
                     }
 
