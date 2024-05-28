@@ -35,7 +35,8 @@ include("components/include/nav.php")
         .then(response => response.json())
         .then(data => {
             equiposPrimeraRonda = [[data[0],data[1]],[data[2],data[3]],[data[4],data[5]],[data[6],data[7]]];
-            imprimirTablas();
+        
+            crearTabla(equiposPrimeraRonda);
         })
 
     let equiposPrimeraRonda = [];
@@ -52,39 +53,29 @@ include("components/include/nav.php")
     }
 
     
-    function imprimirTablas(){
-        console.log(equiposPrimeraRonda)
-        let partidoNum = 1;
+    function crearTabla(segundaRonda){
+                let partidoNum =1;
+                console.log(segundaRonda)
+                segundaRonda.forEach(e => {
+                    console.log(e)
 
-        <?php $_SESSION['torneo_id']=$_GET['torneo_id'] ?>
+                    let tabla = document.getElementById(`primeraFase${partidoNum}`);
 
-        equiposPrimeraRonda.forEach(e => {
+                    let tr = document.createElement('tr');
 
-            console.log(e)
-            
-            let tabla = document.getElementById(`primeraFase${partidoNum}`);
+                    let id1 = `btnE${e[0].equipo_id}`
+                    let id2 = `btnE${e[1].equipo_id}`
 
-            console.log(typeof(e[0]))
+                    tr.innerHTML=` 
+                    <td> ${e[0].equipo_nombre} </td> 
+                    <td> ${e[1].equipo_nombre} </td> 
+                    <td> <button id=${id1} onclick=equipoGanador1(${e[0].equipo_id},${id1},${id2})> GANA EQUIPO 1 </button> <button id=${id2} onclick=equipoGanador1(${e[1].equipo_id},${id2},${id1})> GANA EQUIPO 2 </button> </td> 
+                    `
 
-                tr.innerHTML=` 
-                <td> ${e[0].equipo_nombre} </td> 
-                <td> ${e[1].equipo_nombre} </td> 
-                <td> <button class="anyadirComentario" id=${id1} onclick=equipoGanador1(${e[0]},${id2})> GANA EQUIPO 1 </button> <button class="anyadirComentario" id=${id2} onclick=equipoGanador1(${e[1]},${id1})> GANA EQUIPO 2 </button> </td> 
-                `
+                    tabla.appendChild(tr)
 
-            let id1 = `btnE${e[0].equipo_id}`
-            let id2 = `btnE${e[1].equipo_id}`
-
-            tr.innerHTML=` 
-            <td> ${e[0].equipo_nombre} </td> 
-            <td> ${e[1].equipo_nombre} </td> 
-            <td> <button id=${id1} onclick=equipoGanador1(${e[0].equipo_id},${id1},${id2})> GANA EQUIPO 1 </button> <button id=${id2} onclick=equipoGanador1(${e[1].equipo_id},${id2},${id1})> GANA EQUIPO 2 </button> </td> 
-            `
-
-            tabla.appendChild(tr)
-
-            partidoNum++;
-        })
+                    partidoNum++;
+                })
     }
 
     function equipoGanador1(equipo,btnGanador,btnPerdedor){

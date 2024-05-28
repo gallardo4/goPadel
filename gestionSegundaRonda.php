@@ -56,7 +56,7 @@ session_start();
         <a class="indexA" href="index.php">Inicio</a>
         <a class="indexA" href="ranking.php">Ranking</a>
         <a class="indexA" href="profesores.php">Profesores</a>
-        <a class="indexA " href="usuarios.php">Usuarios</a>
+        <a class="indexA" href="usuarios.php">Usuarios</a>
         <a class="indexA" href="reservarPista.php">Reservar Pista</a>
         <a class="indexA" href="reservarClase.php">Reservar Clase</a>
         <a class="indexA" href="inscribirseTorneo.php">Inscribirse a Torneo</a>
@@ -89,10 +89,11 @@ session_start();
             <th colspan="2"></th>
 
         </table>
-        
+        <a href="components/procs/eliminarPerdedoresSegundaRonda.proc.php">SIGUIENTE RONDA</a>
+
 
         <script>
-            let equiposSegundaRonda = []
+            
             fetch(`./components/api/verTorneos.proc.php?torneo_id=<?php echo $_SESSION['torneo_id'] ?>`)
                 .then(response => response.json())
                 .then(data => {
@@ -101,6 +102,10 @@ session_start();
                     //console.log(equiposSegundaRonda)
                     crearTabla(equiposSegundaRonda);
                 })
+
+            let equiposSegundaRonda = [];
+
+            let idGanadoresSegundaRonda = []
 
             function separarLocalStorage(){
                 //console.log(localStorage.getItem("ganadoresRonda1"))
@@ -116,7 +121,11 @@ session_start();
             }
 
             function equipoGanador2(equipo,btnGanador,btnPerdedor){
-                console.log(equipo)
+                idGanadoresSegundaRonda+=`${equipo} `;
+                console.log(idGanadoresSegundaRonda)
+                btnGanador.remove()
+                btnPerdedor.remove()
+                document.cookie = `ganadoresSegunda=${idGanadoresSegundaRonda}`
             }
         
 
