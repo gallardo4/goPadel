@@ -11,6 +11,12 @@ if (!isset($_SESSION['usu_id'])) {
 
 <section class="formularios">
     <h2>Configurar Usuario</h2>
+
+    <?php
+        if(isset($_REQUEST['msg'])){
+            echo "<h3>".$_REQUEST['msg']."</h3>";
+        }
+    ?>
     
     <div>
         <form id="formUpdateUser" method="GET" class="formularioVerde2" action="./components/api/actualizarUsuarioGlobal.proc.php?usu_id=<?php echo $_GET['usu_id'] ?>">
@@ -47,6 +53,9 @@ if (!isset($_SESSION['usu_id'])) {
                 <option value="professional">professional</option>
             </select><br>
 
+            <label for="puntuacion">Puntuación</label>
+            <input class="anyadirComentarioTexto" type="text" name="usu_puntuacion" id="puntuacion"><br>
+
             <label for="telefono">Teléfono:</label>
             <input class="anyadirComentarioTexto" type="text" id="telefono" name="usu_telf" required><br>
 
@@ -80,6 +89,8 @@ if (!isset($_SESSION['usu_id'])) {
             console.log(genero)
             let nivel = usuario.usu_nivel;
             console.log(nivel)
+            let puntuacion = usuario.usu_puntuacion;
+            console.log(puntuacion)
             let telefono = usuario.usu_telf;
             console.log(telefono)
             let email = usuario.usu_mail;
@@ -97,14 +108,15 @@ if (!isset($_SESSION['usu_id'])) {
             let formNivel = document.getElementById('nivel');
             formNivel.value = nivel
 
+            let formPuntuacion = document.getElementById('puntuacion');
+            formPuntuacion.value = puntuacion
+
             let formTelefono = document.getElementById('telefono');
             formTelefono.value = telefono
 
             let formEmail = document.getElementById('email');
             formEmail.value = email
-
-            
-        })
+    });
 
 </script>
 

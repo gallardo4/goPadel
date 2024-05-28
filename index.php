@@ -9,10 +9,10 @@ include("components/include/nav.php")
 <?php 
         if(isset($_SESSION['usu_type']) && $_SESSION['usu_type']=='admin'){
             ?>
-            <h1>Gestión de Web</h1>
+            
     <section id="gestionGlobal">
 
-        
+    <h1>Gestión de Web</h1>
 
         
             <div id="gestionBotones">
