@@ -11,34 +11,16 @@ $usu_id = intval($_GET['usu_id']);
 ?>
 
 <section>
-    <h2>Añadir Comentario</h2>
+    <h2>Comentarios del usuario</h2>
 
-<?php
-    $sql = "SELECT texto_comentario FROM COMENTARIOS WHERE alumn_id = $usu_id";
-    $result = $conn->query($sql);
-?>
+    <section>
+        <table class="tablaProfYRank" id="tablaComentarios" border="1">
 
-<section>
-    <h3>Comentarios del Usuario</h3>
-    <table class="tablaProfYRank" id="tablaComentarios" border="1">
-
-       
-    </table>
-
-    <br>
-</section>
-
-    <form action="./components/api/ponerComentario.proc.php" method="POST">
-        <input type="hidden" name="alumn_id" value="<?php echo $usu_id; ?>">
-        <table>
-            <tr>
-                <td><textarea class="anyadirComentarioTexto" name="comentario" placeholder="Añade un comentario" rows="15" cols="100"></textarea><br><br></td>
-            </tr>
-            <tr>
-                <td><input class="anyadirComentario" type="submit" value="Añadir"></td>
-            </tr>
+        
         </table>
-    </form>
+
+        <br>
+    </section>
 </section>
 
 <script>

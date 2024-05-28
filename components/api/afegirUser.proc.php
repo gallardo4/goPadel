@@ -89,7 +89,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["usu_nom"]) && isset($_P
     
         if(mysqli_query($conn, $sql)){
             echo "comanda funcional";
-            header("location: ../../index.php");
+            header("location: ../../login.php");
         }else{
             echo "comanda no funcional: ".mysqli_errno($conn);
         }

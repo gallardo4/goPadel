@@ -15,7 +15,7 @@ $comentario = $_POST['comentario'];
 
 $query = "INSERT INTO COMENTARIOS (id_profesor, id_alumno, texto_comentario) VALUES ($id_profesor, $id_alumno, '$comentario')";
 if (mysqli_query($conn, $query)) {
-    header("location: ../../comentarioRevision.php?msg=Se ha insertado bien el comentario.");
+    header("location: ../../comentarioRevision.php?msg=Se ha insertado bien el comentario.&comentario=$comentario");
 
 } else {
     echo mysqli_errno($conn);

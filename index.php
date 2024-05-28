@@ -57,7 +57,7 @@ include("components/include/nav.php")
         </section>
     
         <section class="section1" >
-            <h1>Como funcionamos?</h1>
+            <h1>¿Cómo funcionamos?</h1>
             <p>Hay dos modos de utilizar nuestra página web:</p>
             <p><b>Sin estar registrado:</b> sin estar registrado solo podrás ver esta página, la página inicial, el ranking de usuarios y los profesores disponibles, sin poder reservar alguna clase o inscribirse a algun torneo activo. <br> Es un tanto limitado porque lo que buscamos es que más gente se una a este fenómeno que es el pádel. </p>
             <p><b>Estando registrado:</b> de otro modo, hay dos formas de estar registrado. Siendo un usuario normal y corriente podrás hacer diversas cosas. Lo primero, tendrás acceso a los mismos sitios que un usuario no registrado y, además, podrás hacer reservas de clases, pistas y participar en torneos. <br> La otra forma que tienes de estar registrado es como un admin. De esta manera, tendrás todos los privilegios anteriores y podrás gestionar los torneos y usuarios YA CREADOS, pudiendo modificarlos y eliminarlos si fuera necesario.</p>
@@ -71,7 +71,7 @@ include("components/include/nav.php")
                hayan impartido mas clases, es decir los mas populares, ovbiamente se pueden realizar reservar de pistas por si quieres disfrutar de un dia maravilloso de padel con tus amigos</p>
         </section>
         <section class="section1">
-            <h1>¿Porque nosotros?</h1>
+            <h1>¿Por qué nosotros?</h1>
             <p>Porque elegirnos a nosotros, somos una gran empresa de gestion de padel, con la que podras hacer crecer grandiosamente tus ganancias, gracias a nuestros servicios,
                junto a la gran colaboración y compasión utilizada dia a dia en nuestro trabajo en combinación de experiencia, tecnología avanzada y enfoque centrado en el cliente 
                nos convierte en la opción ideal para llevar tu negocio de pádel al siguiente nivel. 
