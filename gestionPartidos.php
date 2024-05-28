@@ -78,7 +78,7 @@ include("components/include/nav.php")
                 tr.innerHTML=` 
                 <td> ${e[0].equipo_nombre} </td> 
                 <td> ${e[1].equipo_nombre} </td> 
-                <td> <button id=${id1} onclick=equipoGanador1(${e[0]},${id2})> GANA EQUIPO 1 </button> <button id=${id2} onclick=equipoGanador1(${e[1]},${id1})> GANA EQUIPO 2 </button> </td> 
+                <td> <button class="anyadirComentario" id=${id1} onclick=equipoGanador1(${e[0]},${id2})> GANA EQUIPO 1 </button> <button class="anyadirComentario" id=${id2} onclick=equipoGanador1(${e[1]},${id1})> GANA EQUIPO 2 </button> </td> 
                 `
 
                 tabla.appendChild(tr)

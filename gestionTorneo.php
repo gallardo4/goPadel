@@ -62,7 +62,7 @@ include("components/include/nav.php")
                     <td> ${torneo.torneo_id} </td>
                     <td> ${torneo.torneo_nom} </td>
                     <td> ${torneo.torneo_nivel} </td>
-                    <td> <a href="gestionPartidos.php?torneo_id=${torneo.torneo_id}">GESTIONAR TORNEO</a> </td>
+                    <td> <a class="anyadirComentario" href="gestionPartidos.php?torneo_id=${torneo.torneo_id}">GESTIONAR TORNEO</a> </td>
                 `;
 
                 torneoTable.appendChild(row);
