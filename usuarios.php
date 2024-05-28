@@ -47,7 +47,7 @@ if (!isset($_SESSION["usu_id"])) {
                         echo "<th>Teléfono de Contacto</th>";
                     }
 
-                    if (isset($_SESSION['usu_type']) && $_SESSION['usu_type']=='prof') {
+                    if (isset($_SESSION['usu_type']) && $_SESSION['usu_type'] != 'prof') {
                         echo "<th>Comentario</th>";
                     }
 
@@ -95,6 +95,7 @@ if (!isset($_SESSION["usu_id"])) {
                         
                         <td>${usuario.usu_mail}</td>
                         <td>${usuario.usu_telf}</td>
+                        <td><a class=anyadirComentario href=./verComentarios.php?usu_id=${usuario.usu_id}>Ver Comentarios</a></td>
                         <td><a class=anyadirComentario href=./components/api/eliminarUser.proc.php?usu_id=${usuario.usu_id}>Eliminar</a></td>
                         <td><a class=anyadirComentario href=./modificarUser.php?usu_id=${usuario.usu_id}>Modificar</a></td>
 
