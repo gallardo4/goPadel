@@ -41,9 +41,9 @@ if (!isset($_SESSION["usu_id"])) {
                 ?>
             </tr>
         </thead>
-        <tbody id="empresa-table">
+        <tbody id="user-table">
         </tbody>
-        <tfoot id="empresa-table-foot">
+        <tfoot id="user-table-foot">
         </tfoot>
     </table>
     <script>
@@ -51,9 +51,9 @@ if (!isset($_SESSION["usu_id"])) {
         fetch(`./components/api/verUsuarios.proc.php`)
         .then(response => response.json())
         .then(data => {
-            // Actualizar la tabla con las empresas obtenidas
-            const empresaTable = document.getElementById('empresa-table');
-            empresaTable.innerHTML = ''; // Limpiar la tabla antes de agregar nuevas filas
+            // Actualizar la tabla con las users obtenidas
+            const userTable = document.getElementById('user-table');
+            userTable.innerHTML = ''; // Limpiar la tabla antes de agregar nuevas filas
             data.forEach(usuario => {
                 const row = document.createElement('tr');
                 row.innerHTML = `
@@ -84,7 +84,7 @@ if (!isset($_SESSION["usu_id"])) {
 
                     ?>
                 `;
-                empresaTable.appendChild(row);
+                userTable.appendChild(row);
             });
         })
         .catch(error => {
