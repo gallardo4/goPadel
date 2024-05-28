@@ -408,15 +408,15 @@ span{
 
 
 .tablaProfYRank tr {
-    background-color: #fffde1;
+    background-color: #fffde175;
 }
 
 .tablaProfYRank tr:nth-child(even) {
-    background-color: #ffe1e1;
+    background-color: #ffe1e186;
 }
 
 .tablaProfYRank tr:hover {
-    background-color: #cecece;
+    background-color: #cececebd;
 }
 
 .tablaProfYRank img {
