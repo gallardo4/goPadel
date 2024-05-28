@@ -32,12 +32,14 @@ if (!isset($_SESSION["usu_id"])) {
                 <th>Teléfono de Contacto</th>
                 <?php
 
-                    if (isset($_SESSION['usu_type']) && $_SESSION['usu_type']!='user') {
+                    if (isset($_SESSION['usu_type']) && $_SESSION['usu_type']=='prof') {
                         echo "<th>Comentario</th>";
-                        if($_SESSION['usu_type']=='admin'){
-                            echo "<th colspan=2>Gestión</th>";
-                        }
                     }
+
+                    if($_SESSION['usu_type']=='admin'){
+                        echo "<th colspan=2>Gestión</th>";
+                    }
+
                 ?>
             </tr>
         </thead>
@@ -64,17 +66,24 @@ if (!isset($_SESSION["usu_id"])) {
                     <td>${usuario.usu_telf}</td>
                     <?php
 
+                    if (isset($_SESSION["usu_type"]) && $_SESSION["usu_type"]=='prof') {
+                        ?>
+
+                        <td><a class=anyadirComentario href=ponerComentario.php?usu_id=${usuario.usu_id}>Añadir Comentario</a></td>
+
+                        <?php
+                    }
+
                     if (isset($_SESSION['usu_type']) && $_SESSION['usu_type']=='admin' ) {
                         ?>
                         
-                        <td><a class=anyadirComentario href=ponerComentario.php?usu_id=${usuario.usu_id}>Añadir Comentario</a></td>
                         <td><a class=anyadirComentario href=./components/api/eliminarUser.proc.php?usu_id=${usuario.usu_id}>Eliminar</a></td>
                         <td><a class=anyadirComentario href=./modificarUser.php?usu_id=${usuario.usu_id}>Modificar</a></td>
 
                         <?php
                     
                     
-                    }elseif (isset($_SESSION['usu_type']) && $_SESSION['usu_type']!='user') {
+                    }elseif (isset($_SESSION['usu_type']) && $_SESSION['usu_type']=='user') {
                         ?>
                         
                         <td><a class=anyadirComentario href=ponerComentario.php?usu_id=${usuario.usu_id}>Añadir Comentario</a></td>
