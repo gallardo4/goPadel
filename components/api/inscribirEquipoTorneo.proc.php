@@ -38,11 +38,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET' && isset($_GET['equipos']) && isset($_GE
 
         if (mysqli_query($conn, $sql)) {
             echo 'funciona';
-            //header('location: ../../inscribirseTorneo.php?msg=¡Se te ha inscrito en el torneo!');  
+            header('location: ../../inscribirseTorneo.php?msg=¡Se te ha inscrito en el torneo!');  
         } else {
             echo mysqli_errno($conn);
             echo 'no funciona';
-            //header('location: ../../inscribirseTorneo.php?msg=No se te ha inscrito esta vez en el torneo.');
+            header('location: ../../inscribirseTorneo.php?msg=Ya estas inscrito en el torneo.');
         }
     }else{
         header('location: ../../inscribirseTorneo.php?msg=¡El torneo está lleno!');

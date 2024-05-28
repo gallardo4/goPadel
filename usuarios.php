@@ -74,7 +74,7 @@ if (!isset($_SESSION["usu_id"])) {
             data.forEach(usuario => {
                 const row = document.createElement('tr');
                 row.innerHTML = `
-                    <td><img style="width:60px; height:60px" src='components/pfpImg/${usuario.usu_img}'></td>
+                    <td><img style="width:60px; height:60px; border-radius:15px;" src='components/pfpImg/${usuario.usu_img}'></td>
                     <td>${usuario.usu_apellido}</td>
                     <td>${usuario.usu_nom}</td>
 
