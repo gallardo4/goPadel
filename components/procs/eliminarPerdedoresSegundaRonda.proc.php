@@ -8,7 +8,7 @@ $arrayGanadores =trim($_COOKIE['ganadoresSegunda']);
 
 $arrayGanadores = str_split($arrayGanadores,3);
 
-$torneo = $_SESSION['torneo_id'];
+$torneo = $_GET['torneo_id'];
 
 echo $torneo."<br>";
 
@@ -22,7 +22,7 @@ if(count($arrayGanadores)==2){
 
         echo "funciona";
 
-        header('location: ../../gestionTerceraRonda.php');
+        header("location: ../../gestionTerceraRonda.php?torneo_id=$torneo");
 
     }else{
 

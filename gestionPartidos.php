@@ -25,7 +25,7 @@ include("components/include/nav.php")
     <th colspan="2"></th>
 </table>
 
-<a href="components/procs/eliminarPerdedores.proc.php">SIGUIENTE RONDA</a>
+<a href="components/procs/eliminarPerdedores.proc.php?torneo_id=<?php echo $_GET['torneo_id'] ?>">SIGUIENTE RONDA</a>
 
 </section>
 
@@ -83,8 +83,7 @@ include("components/include/nav.php")
         console.log(idGanadoresPrimeraRonda)
         btnGanador.remove()
         btnPerdedor.remove()
-        localStorage.setItem("ganadoresRonda1",idGanadoresPrimeraRonda)
-        document.cookie = `ganadores=${idGanadoresPrimeraRonda}`
+        document.cookie = `ganadoresRonda1=${idGanadoresPrimeraRonda}`
 
     }
     

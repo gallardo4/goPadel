@@ -1,14 +1,14 @@
 <?php
 
-include("../../components/include/database.php");
+include("../include/database.php");
 
 session_start();
 
-$arrayGanadores =trim($_COOKIE['ganadores']);
+$arrayGanadores =trim($_COOKIE['ganadoresRonda1']);
 
 $arrayGanadores = str_split($arrayGanadores,3);
 
-$torneo = $_SESSION['torneo_id'];
+$torneo = $_GET['torneo_id'];
 
 echo $torneo."<br>";
 
@@ -22,7 +22,7 @@ if(count($arrayGanadores)==4){
 
         echo "funciona";
 
-        header('location: ../../gestionSegundaRonda.php');
+        header("location: ../../gestionSegundaRonda.php?torneo_id=$torneo");
 
     }else{
 

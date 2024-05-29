@@ -10,12 +10,12 @@ include("components/include/nav.php")
             <th colspan="2"></th>
         </table>
 
-        <a href="components/procs/eliminarPerdedoresSegundaRonda.proc.php?torneo_id=<?php echo $_SESSION['torneo_id'] ?>">VER EQUIPO GANADOR</a>
+        <a href="./components/procs/eliminarPerdedoresTerceraRonda.proc.php?torneo_id=<?php echo $_GET['torneo_id'] ?>">VER EQUIPO GANADOR</a>
 
 
         <script>
             
-            fetch(`./components/api/verTorneos.proc.php?torneo_id=<?php echo $_SESSION['torneo_id'] ?>`)
+            fetch(`./components/api/verTorneos.proc.php?torneo_id=<?php echo $_GET['torneo_id'] ?>`)
                 .then(response => response.json())
                 .then(data => {
                     //console.log(data)

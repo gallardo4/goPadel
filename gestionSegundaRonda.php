@@ -89,12 +89,12 @@ session_start();
             <th colspan="2"></th>
 
         </table>
-        <a href="components/procs/eliminarPerdedoresSegundaRonda.proc.php">SIGUIENTE RONDA</a>
+        <a href="components/procs/eliminarPerdedoresSegundaRonda.proc.php?torneo_id=<?php echo $_GET['torneo_id'] ?>">SIGUIENTE RONDA</a>
 
 
         <script>
             
-            fetch(`./components/api/verTorneos.proc.php?torneo_id=<?php echo $_SESSION['torneo_id'] ?>`)
+            fetch(`./components/api/verTorneos.proc.php?torneo_id=<?php echo $_GET['torneo_id'] ?>`)
                 .then(response => response.json())
                 .then(data => {
                     //console.log(data)
@@ -110,7 +110,7 @@ session_start();
             function separarLocalStorage(){
                 //console.log(localStorage.getItem("ganadoresRonda1"))
 
-                let equipos = documcookie.getItem("ganadoresRonda1").trim().split(" ")
+                let equipos = document.cookie.getItem("ganadoresRonda1").trim().split(" ")
 
                 //console.log(equipos)
 
