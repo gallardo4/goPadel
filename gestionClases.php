@@ -9,8 +9,6 @@ if (!isset($_SESSION["usu_id"])) {
 
 ?>
 
-    
-
     <h2>Lista de clases</h2>
     <br>
     <br>
