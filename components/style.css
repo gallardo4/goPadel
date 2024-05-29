@@ -442,20 +442,20 @@ span{
 }
 
 .reserva {
-    background-color: #FAFBF7;  /* Fondo claro */
+    background-color: #FAFBF7;
     padding: 20px;
     font-size: 15px;
     color: black;
     text-align: center;
     margin: 40px 0;
-    border-radius: 15px;  /* Esquinas redondeadas */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Sombra para dar profundidad */
-}
-.reserva h2 {
-    margin-top: 0;  /* Eliminar margen superior */
-}
-.reserva p {
-    margin: 10px 0;  /* Margen entre párrafos */
-    /*font-weight: bold;  /* Texto en negrita */
+    border-radius: 15px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+.reserva h2 {
+    margin-top: 0;
+}
+
+.reserva p {
+    margin: 10px 0;
+}
