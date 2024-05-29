@@ -1,8 +1,7 @@
 <?php
 include("./components/include/nav.php");
-?>
+if(isset($_GET['pista_id']) && isset($_GET['fecha_dia']) && isset($_GET['precio_clase']) && isset($_GET['hora']) && isset($_GET['nivel'])){
 
-<?php
      $pista_id = $_GET['pista_id'];
      $fecha_dia = $_GET['fecha_dia'];
      $precio_clase = $_GET['precio_clase'];
@@ -19,5 +18,14 @@ include("./components/include/nav.php");
     </div>
 
 <?php
+}else{
+    ?>
+    <div class="reserva">
+        <h2>NO PUEDES APUNTARTE A ESTA CLASE</h2>
+        <p> No ha sido posible apuntarte a esta clase. </p>
+    </div>
+
+<?php
+}
 include("./components/include/footer.html");
 ?>

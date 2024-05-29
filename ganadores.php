@@ -7,7 +7,11 @@ include("components/include/nav.php")
         
     </section>
 
-<script></script>
+<script>
+
+
+
+</script>
 <?php
 include("components/include/footer.html")
 ?>

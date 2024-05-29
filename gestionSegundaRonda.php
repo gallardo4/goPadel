@@ -110,7 +110,7 @@ session_start();
             function separarLocalStorage(){
                 //console.log(localStorage.getItem("ganadoresRonda1"))
 
-                let equipos = localStorage.getItem("ganadoresRonda1").trim().split(" ")
+                let equipos = documcookie.getItem("ganadoresRonda1").trim().split(" ")
 
                 //console.log(equipos)
 

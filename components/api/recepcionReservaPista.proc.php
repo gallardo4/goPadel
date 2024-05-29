@@ -22,7 +22,7 @@ session_start();
 
     if (mysqli_num_rows($check_result) > 0) {
         
-        header("location: ../../mensajeReserva.php?valido=false");
+        header("location: ../../mensajeReserva.php");
 
     } else {
         // INSERTAR RESERVA EN TABLA RESERVA_PISTA
@@ -31,7 +31,7 @@ session_start();
 
         //echo $sql . "<br>";  // SQL CODIGO
         if ($result) {
-            header("location: ../../mensajeReserva.php?valido=true&pista_id=$pista_id&res_fecha=$res_fecha&precio_pista=$precio_pista&hora=$hora");
+            header("location: ../../mensajeReserva.php?pista_id=$pista_id&res_fecha=$res_fecha&precio_pista=$precio_pista&hora=$hora");
         } 
     } 
 
