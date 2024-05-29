@@ -11,6 +11,10 @@ Proyecto grupal (Hugo, Arnau, Alex) basado en una web de **padel**, ambientada p
 * [Funcionalidades](#funcionalidades)
 
 ## INTRODUCCIÓN
+Este proyecto, parte de un trabajo final, el cual se ha realizado en el instituto en horas de clase, en grupos. Decidimos elegir uno de los temas sugeridos por los profesores porque nos pareció muy interesante.
+Esta basado en la gestion de un **club de padel** y contiene diversos servicios, especialmente, creados para poder hacer crecer el negocio, ya que es lo importante, cuando vendes un producto de cara a un cliente
+lo que buscan es potenciar sus negocios para poder generar dinero.
+
 
 ## BASES PROYECTO
 
