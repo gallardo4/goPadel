@@ -19,15 +19,16 @@ lo que buscan es potenciar sus negocios para poder generar dinero.
 ## BASES PROYECTO
 
 ### Diagrama de Arquitectura
+![arquitectura](imagesREADME/arquitectura.png)
 
 ### Diagrama del Modelo Entidad Relación
-![Texto alternativo]()
+![entidadRelación](imagesREADME/entidadRelacion.png)
 
 ### Diagrama Casos de Uso
+![casosUso](imagesREADME/casosUso.png)
 
 ### Guía Estilo
-
-## FUNCIONALIDADES
+![guíaEstilo](imagesREADME/estilo.png)
 
 ### No logueado
 Con este tier puedes ver las páginas principales de la web. Puedes ver la página principal `index.php`, en la cual hay información sobre la propia página, `ranking.php`, donde podrás ver los 10 usuarios registrados con MÁS puntuación, los profesores disponibles que dan clase (aunque no podrás reservar) e información sobre estos. Por último, los formularios de `login.php`, para iniciar sesión si ya tienes cuenta, y `register.php` para registrarte si no tienes una cuenta ya creada.
