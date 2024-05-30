@@ -21,6 +21,7 @@ lo que buscan es potenciar sus negocios para poder generar dinero.
 ### Diagrama de Arquitectura
 
 ### Diagrama del Modelo Entidad Relación
+![Texto alternativo]()
 
 ### Diagrama Casos de Uso
 
