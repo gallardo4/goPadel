@@ -48,3 +48,6 @@ Esta página web goza de una base de datos en la cual se guardan diferentes dato
 
 #### Reserva de pistas y clases
 Como ya hemos comentado, puede reservarse 1 de las 12 pistas disponibles, aunque dos de ellas están dedicadas a clases, en franjas de tiempo de dos horas. El sitio está abierto de 8 de la mañana (08:00 am) a 8 de la tarde (20:30 pm), 12 horas y media. Puedes reservar pistas de 8 a 10, de 10 a 12, de 12 a 14, de 14 a 16, de 16 a 18 y de 18 a 20. Las pistas 11 y 12 están reservadas para realizar clases privadas de profesores con alumnos.
+
+#### Inscripción y creación de Torneos
+Esta funcionalidad permite a los administradores crear torneos. Los torneos son de hasta 8 equipos. A partir de aquí, hay 3 pantallas donde se desarrollan los torneos. En la primera están los 8 equipos emparejados. Hay unos botones al lado de cada partido para elegir qué equipo ha sido el vencedor. Los datos del equipo vencedor se guardan, y en el momento de pasar a la siguiente fase, se borran los equipos que han perdido. Así durante 3 rondas. 8 equipos y 4 partidos, 4 equipos y 2 partidos, y la final. Después de estas 3 pantallas acabas en la pantalla de Ganadores, en la cual sale el nombre del equipo de los vencedores y los miembros que lo componen. Solamente los ganadores consiguen 150 puntos al ganar un torneo.
