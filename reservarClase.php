@@ -80,7 +80,7 @@ if (!isset($_SESSION["usu_id"])) {
                 
                         if (isset($_SESSION['usu_id'])) {
                             ?>
-                                <td><input class="anyadirComentario" form="${form}" type="date" name="res_fecha" size="20" placeholder="Fecha" required></td>                    
+                                <td><input class="anyadirComentario" form="${form}" type="date" min="<?php print_r(getDate()['year']."-0".getDate()['mon']."-".getDate()['mday']) ?>" name="res_fecha" size="20" placeholder="Fecha" required></td>                    
                                 <td><input class="anyadirComentario" form="${form}" type="submit" value="Apuntarse a esta clase"></td>  
                             <?php
                         }

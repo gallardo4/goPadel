@@ -22,7 +22,7 @@ if (!isset($_SESSION["usu_id"])) {
                     <td><input class="anyadirComentarioTexto" type="number" name="pista_id" max="10" min="1" placeholder="Pista" required></td>
                 </tr>
                 <tr>
-                    <td><input class="anyadirComentario" type="date" name="res_fecha" size="20" placeholder="Fecha" required></td>
+                    <td><input class="anyadirComentario" type="date" min="<?php print_r(getDate()['year']."-0".getDate()['mon']."-".getDate()['mday']) ?>" name="res_fecha" size="20" placeholder="Fecha" required></td>
                 </tr>
                 <tr><td>
 
